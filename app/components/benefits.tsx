@@ -17,7 +17,7 @@ export default function Benefits() {
         <section className="bg-background py-14">
             <h1 className="font-[700] font-[Outfit] text-primary text-center 
             text-[3rem] tracking-wide"
-            >Insert the Different Benefits of the Company
+            >Insert the Multiple Benefits of the Company
             </h1>
 
             <div className="flex justify-center items-center mt-14 mb-10 gap-24">

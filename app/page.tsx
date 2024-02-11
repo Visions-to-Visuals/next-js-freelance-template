@@ -3,6 +3,7 @@ import Navbar from "./components/navbar"
 import HeroSection from "./components/hero"
 import Categories from "./components/categories"
 import Benefits from "./components/benefits"
+import Showcase from "./components/showcase"
 import Contact from "./components/contact"
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
 
       <Categories></Categories>
       <Benefits></Benefits>
-      <Categories></Categories>
+      <Showcase></Showcase>
       <Contact></Contact>
     </>
   )
