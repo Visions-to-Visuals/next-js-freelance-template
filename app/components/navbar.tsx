@@ -10,8 +10,8 @@ export default function Navbar() {
     }
 
     return(
-        <nav className="h-[100px] flex justify-between items-center px-8">
-            <img className="h-[50px] cursor-pointer" src="favicon.ico"></img>
+        <nav className="h-[100px] flex justify-between items-center px-[2rem]">
+            <img className="h-[3rem] cursor-pointer" src="favicon.ico"></img>
             <ul className="flex flex-row items-center justify-center px-4 gap-x-8 text-primary">
                 <NavItem text="Home" page=""></NavItem>
                 <NavItem text="Projects" page=""></NavItem>

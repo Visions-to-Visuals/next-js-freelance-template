@@ -1,8 +1,8 @@
 export default function HeroSection() {
     return (
     <>
-        <div className="w-[100%] flex flex-row justify-center items-top gap-[5rem] mt-10">
-            <div className="w-[45%] font-[Outfit] text-primary">
+        <div className="flex flex-row justify-center items-top gap-[5rem] mt-10">
+            <div className="w-[42rem] max-w-[45rem] font-[Outfit] text-primary">
                 <h1 className="text-[7rem] leading-[7rem] font-[700]">
                     Name of the Company
                 </h1>

@@ -9,7 +9,7 @@ import Contact from "./components/contact"
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen">
+      <div className="pb-[7rem]">
         <Background></Background>
         <Navbar></Navbar>
         <HeroSection></HeroSection>

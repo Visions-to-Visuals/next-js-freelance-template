@@ -16,7 +16,7 @@ const config: Config = {
     },
 
     screens: {
-      'monitor': {'min': '1440px'},       // 1440px and beyond
+      'monitor': {'min': '2000px'},       // 1600px and beyond
       'laptop': {'max': '1440px'},        // 1250px up to 1440px
       'laptop-s': {'max': '1250px'},      // 1024px up to 1250px
       'tablet': {'max': '1024px'},        // 768px up to 1024px
