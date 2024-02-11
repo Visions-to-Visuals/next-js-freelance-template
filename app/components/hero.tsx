@@ -1,14 +1,14 @@
 export default function HeroSection() {
     return (
-        <>
-        <div className="w-[100%] flex flex-row justify-center items-top gap-[6rem] mt-8">
+    <>
+        <div className="w-[100%] flex flex-row justify-center items-top gap-[5rem] mt-10">
             <div className="w-[45%] font-[Outfit] text-primary">
                 <h1 className="text-[7rem] leading-[7rem] font-[700]">
                     Name of the Company
                 </h1>
-                <p className="text-[1.5rem] font-[500] mt-[4rem]">
+                <p className="text-[1.5rem] font-[500] mt-[4rem] pr-6 pl-2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                tempor incididunt ut labore et dolore magna ut aliqua. Ut enim ad minim veniam, 
                 quis nostrud exercitation ullamco laboris aliquip commodo consequat.
                 </p>
             </div>
@@ -20,6 +20,6 @@ export default function HeroSection() {
             px-8 py-2 bg-secondary rounded-[15px] hover:bg-accent hover:text-secondary 
             duration-200 ease-in">Explore the Galaxy</button>
         </div>
-        </>
+    </>
     )
 }

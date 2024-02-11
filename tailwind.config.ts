@@ -11,7 +11,8 @@ const config: Config = {
     colors: {
       primary: "#f2f5f2",    
       secondary: "#202124",   
-      accent: "#69AAD3",     
+      accent: "#69AAD3",  
+      background: "#131314"   
     },
 
     screens: {
@@ -27,7 +28,7 @@ const config: Config = {
     extend: {
 
       backgroundImage: {
-        'placeholder': "url('/images/placeholder.jpg')",
+        // 'placeholder': "url('/images/placeholder.jpg')",
       },
     },
   },
