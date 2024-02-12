@@ -4,7 +4,7 @@ export default function Showcase() {
         return(
             <div>
                 <h2 className="text-[5rem] font-[Outfit] font-[600] text-center">{number}</h2>
-                <p className="font-[Outfit] text-[1.2rem] text-center">{text}</p>
+                <p className="font-[Outfit] text-[1.3rem] text-center">{text}</p>
             </div>
         )
     }
@@ -25,7 +25,7 @@ export default function Showcase() {
         text-[3rem] tracking-wide"
         >Insert the Company's Previous Work and Clients
         </h1>
-        <p className="font-[Outfit] w-[54rem] mx-auto text-center mt-10 text-[1.2rem]">
+        <p className="font-[Outfit] w-[58rem] mx-auto text-center mt-10 text-[1.3rem]">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. 
         Augue neque gravida in fermentum et sollicitudin ac orci phasellus. 
