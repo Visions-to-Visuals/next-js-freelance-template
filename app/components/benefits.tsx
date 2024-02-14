@@ -14,14 +14,14 @@ export default function Benefits() {
     }
 
     return(
-        <section className="bg-background py-14">
+        <section className="bg-background py-14 tablet-s:px-[2rem]">
             <h1 className="font-[700] font-[Outfit] text-primary text-center 
             text-[3rem] tracking-wide"
             >Insert the Multiple Benefits of the Company
             </h1>
 
-            <div className="flex justify-center items-center mt-14 mb-10 gap-24">
-                <div className="flex flex-col justify-center items-start gap-5 w-[40rem]">
+            <div className="flex justify-center items-center mt-14 tablet-s:mt-10 mb-10 gap-24 tablet-s:flex-col-reverse tablet-s:gap-6">
+                <div className="flex flex-col justify-center items-start gap-5 w-[40rem] tablet-s:w-[100%]">
                     <BenefitsItem 
                     text="Insert a sentence from the company about Benefit Number 1. Insert another sentence about the benefit."></BenefitsItem>
                     <BenefitsItem 
@@ -32,7 +32,7 @@ export default function Benefits() {
                     text="Insert a sentence from the company about Benefit Number 4. Insert another sentence about the benefit."></BenefitsItem>
                 </div>
 
-                <img src="/images/benefits.webp" className="w-[30rem]"></img>
+                <img src="/images/benefits.webp" className="w-[30rem] tablet-s:w-[25rem]"></img>
             </div>
         </section>
     )

@@ -21,6 +21,7 @@ export default function RootLayout({
     laptop:text-[.85rem] 
     laptop-s:text-[.75rem] 
     tablet:text-[1.2vw]
+    tablet-s:text-[1rem]
     ">
       <body className={inter.className}>{children}</body>
     </html>
