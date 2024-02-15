@@ -19,10 +19,19 @@ body
 {
   margin: 0;
   padding: 0;
-  background-color: #202124;
+  background-color: #2B4C3B;
 }
 
 h1 {
+  font-family: "Outfit";
   font-size: clamp(2rem, 8vw, 2.8rem);
   line-height: clamp(2.5rem, 10vw, 3.6rem);
+}
+
+p {
+  font-family: "Outfit";
+}
+
+button {
+  font-family: "Outfit";
 }
