@@ -21,3 +21,8 @@ body
   padding: 0;
   background-color: #202124;
 }
+
+h1 {
+  font-size: clamp(2rem, 8vw, 2.8rem);
+  line-height: clamp(2.5rem, 10vw, 3.6rem);
+}

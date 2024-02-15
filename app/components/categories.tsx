@@ -8,18 +8,19 @@ export default function Categories() {
                     <img src={image} className="rounded-3xl w-[16em] aspect-[2/3] object-cover laptop-s:w-[14rem]"></img>
                 </div>
                 <p className="text-center mt-5 font-[500] font-[Outfit]
-                 text-secondary text-[1.3rem]">{name}</p>
+                 text-secondary text-[1.3rem] tablet-s:text-[1.1rem]">{name}</p>
             </div>
         )
     }
 
     return(
-        <section className="bg-primary py-14 tablet-s:px-[2rem]">
+        <section className="bg-primary py-14 tablet-s:px-[2rem] mobile:px-[1rem]">
             <h1 className="font-[700] font-[Outfit] text-secondary text-center 
-            text-[3rem] tracking-wide"
+            tracking-wide mobile:px-[1rem]"
             >Insert the Different Categories of the Company
             </h1>
-            <div className="flex justify-center items-center mt-[4rem] gap-14 mb-10 laptop-s:flex-wrap">
+            <div className="flex justify-center items-center mt-[4rem] gap-14 mb-10 
+            laptop-s:overflow-x-scroll tablet-s:justify-start laptop-s:gap-10">
                 <CategoryItem name="Category Name 1" image={"/images/category1.jpg"}></CategoryItem>
                 <CategoryItem name="Category Name 2" image={"/images/category2.jpg"}></CategoryItem>
                 <CategoryItem name="Category Name 3" image={"/images/category3.jpg"}></CategoryItem>

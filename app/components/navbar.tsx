@@ -33,7 +33,7 @@ export default function Navbar() {
             {isMobile ? (
             <nav className="h-[6rem] flex justify-between items-center px-[4vw] tablet-s:h-[4rem]">
                 <div className={`fixed top-0 bottom-0 z-10 bg-accent
-                duration-500 ease-in-out ${overlayVisible ? 'right-0' : '-right-[300px]'} w-[300px] xsm:w-[260px] xxsm:w-[230px]`}>
+                duration-500 ease-in-out ${overlayVisible ? 'right-0' : '-right-[300px]'} w-[300px] mobile:w-[240px]`}>
                     <ul className="flex flex-col items-center justify-center px-4 gap-y-10 
                     text-secondary mt-[8rem] text-[1.2rem]">
                         <NavItem text="Home" page=""></NavItem>
@@ -54,7 +54,7 @@ export default function Navbar() {
             </nav>
 
             ):( 
-                
+
             <nav className="h-[6rem] flex justify-between items-center px-[2rem] tablet-s:h-[4rem]">
                 <img className="h-[3rem] cursor-pointer" src="favicon.ico"></img>
                 <ul className="flex flex-row items-center justify-center px-4 gap-x-8
