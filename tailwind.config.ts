@@ -31,8 +31,9 @@ const config: Config = {
 
       animation:{
         glow: "glow 3s ease-in-out",
-        introduction: "opening 1.5s ease-in-out forwards 1s",
-        fadeLeft: "fade 1.5s ease-in-out"
+        topCover: "opening 1.5s ease-in-out forwards 2s",
+        bottomCover: "opening 1.2s ease-in-out forwards 2.3s",
+        company: "translate 2s ease-in-out forwards .5s"
       },
 
       keyframes: {
@@ -44,14 +45,17 @@ const config: Config = {
 
         opening: {
           "0%": {opacity: "100%"},
-          "80%": {transform: "translateX(110vw)", opacity: "100%" },
+          "80%": {transform: "translateX(110vw)", opacity: "100%"},
           "100%": {transform: "translateX(110vw)", opacity: "0%"},
         },
 
-        fade: {
-          "0%": {opacity: "0%", transform: "translateX(-30px"},
-          "100%": {opacity: "100%", transform: "translateX(0px)"}
-        }
+        translate: {
+          '0%': {opacity: '0' },
+          '20%': {opacity: '1' },
+          '75%': {opacity: '1' },
+          '100%': {opacity: '0' },
+        },
+
       },
 
       backgroundImage: {

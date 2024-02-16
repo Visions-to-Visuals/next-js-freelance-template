@@ -1,6 +1,6 @@
 export default function HeroSection() {
     return (
-    <div className="min-h-screen">
+    <div className="min-h-[90vh]">
         <div className="flex flex-row justify-center items-center gap-[6rem]
         tablet-s:flex-col tablet-s:items-center tablet-s:px-[2rem] tablet-s:gap-[3rem]
         mobile:mt-6 mobile:px-[1rem]">
