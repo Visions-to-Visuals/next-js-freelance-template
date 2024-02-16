@@ -29,6 +29,31 @@ const config: Config = {
 
     extend: {
 
+      animation:{
+        glow: "glow 3s ease-in-out",
+        introduction: "opening 1.5s ease-in-out forwards 1s",
+        fadeLeft: "fade 1.5s ease-in-out"
+      },
+
+      keyframes: {
+        glow: {
+          "0%": { opacity: "0%" },
+          "50%": { opacity: "100%" },
+          "100%": { opacity: "0%" }
+        },
+
+        opening: {
+          "0%": {opacity: "100%"},
+          "80%": {transform: "translateX(110vw)", opacity: "100%" },
+          "100%": {transform: "translateX(110vw)", opacity: "0%"},
+        },
+
+        fade: {
+          "0%": {opacity: "0%", transform: "translateX(-30px"},
+          "100%": {opacity: "100%", transform: "translateX(0px)"}
+        }
+      },
+
       backgroundImage: {
         'background': "url('/images/background2.JPG')",
       },
