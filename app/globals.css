@@ -7,6 +7,7 @@
 {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+  font-family: "Outfit";
 }
 
 html 
@@ -23,15 +24,18 @@ body
 }
 
 h1 {
-  font-family: "Outfit";
   font-size: clamp(2rem, 8vw, 2.8rem);
   line-height: clamp(2.5rem, 10vw, 3.6rem);
 }
 
-p {
-  font-family: "Outfit";
-}
-
-button {
-  font-family: "Outfit";
+@layer utilities {
+	ul li {
+		@apply relative tracking-wider;
+	}
+	ul li::after {
+		@apply content-[''] bg-[#ffffff] h-[3px] w-[0%] left-0 -bottom-[5px] rounded-3xl absolute duration-300;
+	}
+	ul li:hover::after {
+		@apply w-[100%];
+	}
 }

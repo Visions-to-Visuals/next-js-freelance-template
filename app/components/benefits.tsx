@@ -15,7 +15,7 @@ export default function Benefits() {
     }
 
     return(
-        <section className="bg-background py-14 tablet-s:px-[2rem] mobile:px-[1rem]">
+        <section className="bg-secondary py-14 tablet-s:px-[2rem] mobile:px-[1rem]">
             <h1 className="font-[700] font-[Outfit] text-primary text-center tracking-wide"
             >Insert the Multiple Benefits of the Company
             </h1>

@@ -23,7 +23,7 @@ export default function Navbar() {
     function NavItem( {text, page} ) {
         return (
             <a href={page}>
-                <li className="px-2 cursor-pointer font-[700] font-[Outfit] duration-300">{text}</li>
+                <li className="px-2 cursor-pointer font-[700] duration-300">{text}</li>
             </a>
         )
     }
@@ -56,7 +56,7 @@ export default function Navbar() {
 
             <nav className="h-[6rem] flex justify-end items-center px-[2rem] tablet-s:h-[4rem]">
                 <ul className="flex flex-row items-center justify-center px-4 gap-x-8
-                text-primary text-[18px] laptop:text-[16px] laptop-s:text-[14px] tablet:text-[12px]">
+                text-primary text-[16px] laptop:text-[16px] laptop-s:text-[14px] tablet:text-[12px]">
                     <NavItem text="Home" page=""></NavItem>
                     <NavItem text="Project Gallery" page=""></NavItem>
                     <NavItem text="FAQs" page=""></NavItem>
