@@ -15,9 +15,9 @@ export default function Categories() {
 
     return(
         <section className="bg-primary py-14 tablet-s:px-[2rem] mobile:px-[1rem]">
-            <h1 className="font-[700] font-[Outfit] text-secondary text-center 
+            <h1 className="text-dark text-center 
             tracking-wide mobile:px-[1rem]"
-            >Insert the Different Categories of the Company
+            >MEET THE TEAM BEHIND THE MASTERPIECE
             </h1>
             <div className="flex justify-center items-center mt-[4rem] gap-14 mb-10 
             laptop-s:overflow-x-scroll tablet-s:justify-start laptop-s:gap-10">

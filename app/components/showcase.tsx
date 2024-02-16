@@ -21,7 +21,7 @@ export default function Showcase() {
 
     return(
     <section className="bg-primary py-14 text-secondary px-[2rem]">
-        <h1 className="font-[700] font-[Outfit] text-center tracking-wide"
+        <h1 className="text-center tracking-wide"
         >Insert the Company's Previous Work and Clients
         </h1>
         <p className="font-[Outfit] w-[58rem] mx-auto text-center mt-10 text-[1.3rem] tablet-s:w-[100%] tablet-s:text-[1.1rem]">

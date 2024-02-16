@@ -3,7 +3,7 @@ export default function Cover() {
 
         <>
         <div className="fixed z-[100]">
-            <h1 className="fixed top-[20rem] font-[700] text-primary text-[8rem] text-center leading-[10rem]
+            <h1 className="fixed top-[20rem] text-primary text-[8rem] text-center leading-[10rem]
             left-1/2 transform -translate-x-1/2 -translate-y-1/2 tracking-wide animate-company opacity-0">Welcome to</h1>
         </div>
 

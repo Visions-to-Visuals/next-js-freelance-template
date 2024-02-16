@@ -6,7 +6,7 @@ export default function HeroSection() {
         mobile:mt-6 mobile:px-[1rem]">
             <div className="w-[42rem] max-w-[45rem] tabelt-s:max-w-[100%] text-primary 
             tablet-s:justify-center tablet-s:text-center tablet-s:w-[100%]">
-                <h1 className="text-[7rem] leading-[7rem] font-[700]
+                <h1 className="text-[7rem] leading-[7rem]
                 tablet-s:w-[100%] tablet-s:text-[4rem] tablet-s:leading-[4rem] mobile:text-[4rem] mobile:leading-[4.5rem]">
                     <span className="text-[8.2rem]">Schoolland</span> Construction
                 </h1>
