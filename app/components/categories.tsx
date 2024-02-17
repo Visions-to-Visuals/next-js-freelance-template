@@ -8,7 +8,7 @@ export default function Categories() {
                     <img src={image} className="rounded-3xl w-[16em] aspect-[2/3] object-cover laptop-s:w-[14rem]"></img>
                 </div>
                 <p className="text-center mt-5 font-[500] font-[Outfit]
-                 text-secondary text-[1.3rem] tablet-s:text-[1.1rem]">{name}</p>
+                 text-dark text-[1.3rem] tablet-s:text-[1.1rem]">{name}</p>
             </div>
         )
     }
@@ -21,10 +21,10 @@ export default function Categories() {
             </h1>
             <div className="flex justify-center items-center mt-[4rem] gap-14 mb-10 
             laptop-s:overflow-x-scroll tablet-s:justify-start laptop-s:gap-10">
-                <CategoryItem name="Category Name 1" image={"/images/category1.jpg"}></CategoryItem>
-                <CategoryItem name="Category Name 2" image={"/images/category2.jpg"}></CategoryItem>
-                <CategoryItem name="Category Name 3" image={"/images/category3.jpg"}></CategoryItem>
-                <CategoryItem name="Category Name 4" image={"/images/category4.jpg"}></CategoryItem>
+                <CategoryItem name="Timothy Schoolland" image={"/images/team3.png"}></CategoryItem>
+                <CategoryItem name="Levi Sawyer" image={"/images/team1.png"}></CategoryItem>
+                <CategoryItem name="The Other Guy" image={"/images/team2.png"}></CategoryItem>
+                <CategoryItem name="King Beeyn" image={"/images/team4.jpg"}></CategoryItem>
             </div>
         </section>
     )

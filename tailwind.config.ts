@@ -12,7 +12,7 @@ const config: Config = {
       primary: "#FFFFFF",    
       secondary: "#2B4C3B",   
       accent: "#182C25",
-      dark: "1E1E1E",
+      dark: "#1E1E1E",
       hover: "#dedede",
       background: "#2B4C3B"   
     },
@@ -31,9 +31,10 @@ const config: Config = {
 
       animation:{
         glow: "glow 3s ease-in-out",
-        topCover: "opening 1.5s ease-in-out forwards 2s",
-        bottomCover: "opening 1.2s ease-in-out forwards 2.3s",
-        company: "translate 2s ease-in-out forwards .5s"
+        topCover: "opening 1.5s ease-in-out forwards 1.8s",
+        bottomCover: "opening 1.2s ease-in-out forwards 2s",
+        company: "translate 1.8s ease-in-out forwards .4s",
+        commpany: "translate 1.8s ease-in-out forwards .3s"
       },
 
       keyframes: {
@@ -45,15 +46,15 @@ const config: Config = {
 
         opening: {
           "0%": {opacity: "100%"},
-          "80%": {transform: "translateX(110vw)", opacity: "100%"},
+          "70%": {transform: "translateX(110vw)", opacity: "100%"},
           "100%": {transform: "translateX(110vw)", opacity: "0%"},
         },
 
         translate: {
-          '0%': {opacity: '0' },
-          '20%': {opacity: '1' },
-          '75%': {opacity: '1' },
-          '100%': {opacity: '0' },
+          '0%': {opacity: '0', scale:"1" },
+          '20%': {opacity: '1', scale:"1.1"},
+          '75%': {opacity: '1', scale:"1.1" },
+          '90%': {opacity: '0', scale:"1.1" },
         },
 
       },
