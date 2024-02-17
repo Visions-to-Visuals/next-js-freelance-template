@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+
 export default function HeroSection() {
     return (
     <div className="min-h-[90vh]">
@@ -26,7 +30,16 @@ export default function HeroSection() {
             src="images/mobilephoto.jpg"></img>
         </div>
 
-        <div className="flex justify-center items-center mt-[6rem] pb-[7rem]">
+        <div className="flex justify-center items-center mt-[7rem] pb-[7rem] relative">
+        <FontAwesomeIcon icon={faCircle} 
+            className="absolute top-[-9rem] text-primary w-[1rem] opacity-0 animate-circle3"></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faCircle} 
+            className="absolute top-[-7.5rem] text-primary w-[1.5rem] opacity-0 animate-circle2"></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faCircle} 
+            className="absolute top-[-5.5rem] text-primary w-[2rem] opacity-0 animate-circle1"></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faAngleDown} 
+            className="absolute top-[-4rem] text-primary w-[3.5rem] opacity-0 animate-arrow"></FontAwesomeIcon>
+
             <button className="font-[600] text-dark flex text-[1.5rem] 
             px-8 py-2 bg-primary rounded-[15px] hover:bg-accent hover:text-primary
             duration-200 ease-in

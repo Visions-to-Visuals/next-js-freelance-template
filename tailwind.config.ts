@@ -30,24 +30,48 @@ const config: Config = {
     extend: {
 
       animation:{
-        glow: "glow 3s ease-in-out",
+        arrow: "glow 7s ease-in-out 5.4s infinite",
+        circle1: "glow1 7s ease-in-out 5.1s infinite",
+        circle2: "glow2 7s ease-in-out 4.8s infinite",
+        circle3: "glow3 7s ease-in-out 4.5s infinite",
         topCover: "opening 1.5s ease-in-out forwards 1.8s",
         bottomCover: "opening 1.2s ease-in-out forwards 2s",
-        company: "translate 1.8s ease-in-out forwards .4s",
-        commpany: "translate 1.8s ease-in-out forwards .3s"
+        company: "translate 1.8s ease-in-out forwards .4s"
       },
 
       keyframes: {
         glow: {
-          "0%": { opacity: "0%" },
-          "50%": { opacity: "100%" },
-          "100%": { opacity: "0%" }
+          "0%": { opacity: "0" },
+          "30%": { opacity: ".8" },
+          "50%": { opacity: ".0" },
+          "100%": { opacity: "0" }
+        },
+
+        glow1: {
+          "0%": { opacity: "0" },
+          "30%": { opacity: ".6" },
+          "50%": { opacity: ".0" },
+          "100%": { opacity: "0" }
+        },
+
+        glow2: {
+          "0%": { opacity: "0" },
+          "30%": { opacity: ".4" },
+          "50%": { opacity: ".0" },
+          "100%": { opacity: "0" }
+        },
+
+        glow3: {
+          "0%": { opacity: "0" },
+          "30%": { opacity: ".2" },
+          "50%": { opacity: ".0" },
+          "100%": { opacity: "0" }
         },
 
         opening: {
-          "0%": {opacity: "100%"},
-          "70%": {transform: "translateX(110vw)", opacity: "100%"},
-          "100%": {transform: "translateX(110vw)", opacity: "0%"},
+          "0%": {opacity: "1"},
+          "70%": {transform: "translateX(110vw)", opacity: "1"},
+          "100%": {transform: "translateX(110vw)", opacity: "0"},
         },
 
         translate: {
@@ -55,12 +79,13 @@ const config: Config = {
           '20%': {opacity: '1', scale:"1.1"},
           '75%': {opacity: '1', scale:"1.1" },
           '90%': {opacity: '0', scale:"1.1" },
+          '100%': {opacity: '0', scale:"1.1", visibility: "hidden" },
         },
 
       },
 
       backgroundImage: {
-        'background': "url('/images/background2.JPG')",
+        'background': "url('/images/background.jpg')",
       },
     },
   },

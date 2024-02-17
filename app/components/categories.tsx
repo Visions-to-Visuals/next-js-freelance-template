@@ -2,11 +2,9 @@ export default function Categories() {
 
     function CategoryItem( {name, image} ) {
         return(
-            <div className="flex flex-col">
-                <div className="w-[16rem] aspect-[2/3] bg-secondary rounded-3xl
-                hover:scale-[1.05] hover:bg-accent duration-300 cursor-pointer laptop-s:w-[14rem]">
-                    <img src={image} className="rounded-3xl w-[16em] aspect-[2/3] object-cover laptop-s:w-[14rem]"></img>
-                </div>
+            <div className="flex flex-col cursor-pointer">
+                <img src={image} className="rounded-3xl w-[16em] aspect-[2/3] object-cover laptop-s:w-[14rem]
+                hover:scale-[1.05] duration-300"></img>
                 <p className="text-center mt-5 font-[500] font-[Outfit]
                  text-dark text-[1.3rem] tablet-s:text-[1.1rem]">{name}</p>
             </div>
