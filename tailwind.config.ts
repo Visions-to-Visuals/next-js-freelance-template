@@ -42,29 +42,29 @@ const config: Config = {
       keyframes: {
         glow: {
           "0%": { opacity: "0" },
-          "30%": { opacity: ".8" },
-          "50%": { opacity: ".0" },
+          "20%": { opacity: ".8" },
+          "35%": { opacity: ".0" },
           "100%": { opacity: "0" }
         },
 
         glow1: {
           "0%": { opacity: "0" },
-          "30%": { opacity: ".6" },
-          "50%": { opacity: ".0" },
+          "20%": { opacity: ".6" },
+          "30%": { opacity: ".0" },
           "100%": { opacity: "0" }
         },
 
         glow2: {
           "0%": { opacity: "0" },
-          "30%": { opacity: ".4" },
-          "50%": { opacity: ".0" },
+          "20%": { opacity: ".4" },
+          "30%": { opacity: ".0" },
           "100%": { opacity: "0" }
         },
 
         glow3: {
           "0%": { opacity: "0" },
-          "30%": { opacity: ".2" },
-          "50%": { opacity: ".0" },
+          "20%": { opacity: ".2" },
+          "30%": { opacity: ".0" },
           "100%": { opacity: "0" }
         },
 
