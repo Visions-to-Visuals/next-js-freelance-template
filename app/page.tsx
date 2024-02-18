@@ -1,9 +1,10 @@
 import Background from "./components/background"
 import Navbar from "./components/navbar"
 import HeroSection from "./components/hero"
-import Categories from "./components/categories"
 import Benefits from "./components/benefits"
+import Categories from "./components/categories"
 import Showcase from "./components/showcase"
+import Team from "./components/team"
 import Contact from "./components/contact"
 import Cover from "./components/cover"
 
@@ -16,7 +17,7 @@ export default function Home() {
       <HeroSection></HeroSection>
       <Categories></Categories>
       <Benefits></Benefits>
-      <Showcase></Showcase>
+      <Team></Team>
       <Contact></Contact>
     </>
   )
