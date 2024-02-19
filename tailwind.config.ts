@@ -36,7 +36,8 @@ const config: Config = {
         circle3: "glow3 7s ease-in-out 4.5s infinite",
         topCover: "opening 1.5s ease-in-out forwards 1.8s",
         bottomCover: "opening 1.2s ease-in-out forwards 2s",
-        company: "translate 1.8s ease-in-out forwards .4s"
+        welcome: "translate 2s ease-in-out forwards .4s",
+        to: "translate 1.5s ease-in-out forwards .8s"
       },
 
       keyframes: {

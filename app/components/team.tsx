@@ -12,7 +12,7 @@ export default function Team() {
     }
 
     return(
-        <section className="bg-primary py-14 tablet-s:px-[2rem] mobile:px-[1rem]">
+        <section className="bg-primary tablet-s:px-[2rem] mobile:px-[1rem]">
             <h1 className="text-dark text-center 
             tracking-wide mobile:px-[1rem]"
             >MEET THE TEAM BEHIND THE MASTERPIECE

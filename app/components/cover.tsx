@@ -2,9 +2,16 @@ export default function Cover() {
     return(
 
         <>
-        <div className="fixed z-[100]">
+        {/* <div className="fixed z-[100]">
             <h1 className="fixed top-[16rem] text-primary text-[8rem] text-center leading-[10rem]
-            left-[10%] right-[10%] tracking-wide animate-company opacity-0">Welcome to</h1>
+            mx-auto tracking-wide animate-company opacity-0">Welcome</h1>
+            <h1 className="fixed top-[16rem] text-primary text-[8rem] text-center leading-[10rem]
+            tracking-wide animate-company opacity-0">to</h1>
+        </div> */}
+
+        <div className="fixed flex items-center justify-center z-[100] gap-[5rem] top-[16rem] left-10 right-10">
+                <h1 className="text-primary text-[8rem] text-center leading-[10rem] tracking-wide animate-welcome opacity-0">Welcome</h1>
+                <h1 className="text-primary text-[8rem] text-center leading-[10rem] tracking-wide animate-to opacity-0">to</h1>
         </div>
 
         <div className="fixed flex flex-col h-screen z-[50]">

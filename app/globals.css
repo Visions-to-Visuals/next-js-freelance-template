@@ -22,6 +22,12 @@ body
   background-color: #2B4C3B;
 }
 
+section
+{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 h1 {
   font-size: clamp(2rem, 8vw, 3rem);
   line-height: clamp(2.5rem, 10vw, 3.6rem);

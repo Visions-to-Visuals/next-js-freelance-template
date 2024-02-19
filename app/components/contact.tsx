@@ -1,11 +1,11 @@
 export default function Contact() {
     return(
-        <section className="bg-secondary py-14 tablet-s:px-[2rem] mobile:px-[1rem]">
+        <section className="bg-secondary tablet-s:px-[2rem] mobile:px-[1rem]">
             <h1 className="text-primary text-center tracking-wide"
             >CONTACT US TODAY TO LEARN MORE
             </h1>
 
-            <div className="flex flex-col py-[3rem] px-[4rem] tablet-s:px-[2rem] my-[3rem] rounded-2xl w-[55rem] tablet-s:w-[100%] m-auto 
+            <div className="flex flex-col py-[2rem] px-[4rem] tablet-s:px-[2rem] my-[3rem] rounded-2xl w-[55rem] tablet-s:w-[100%] m-auto 
             gap-8 font-[500] font-[Outfit] text-[1.2rem] text-dark duration-300 tablet-s:text-[1rem]">
                 <input type="text" placeholder="Full Name"
                 className="rounded-2xl px-4 py-2"></input>
