@@ -37,7 +37,7 @@ const config: Config = {
         topCover: "opening 1.5s ease-in-out forwards 1.8s",
         bottomCover: "opening 1.2s ease-in-out forwards 2s",
         welcome: "translate 2s ease-in-out forwards .4s",
-        to: "translate 1.5s ease-in-out forwards .8s"
+        to: "translate 1.5s ease-in-out forwards .8s",
       },
 
       keyframes: {
@@ -82,7 +82,6 @@ const config: Config = {
           '90%': {opacity: '0', scale:"1.1" },
           '100%': {opacity: '0', scale:"1.1", visibility: "hidden" },
         },
-
       },
 
       backgroundImage: {

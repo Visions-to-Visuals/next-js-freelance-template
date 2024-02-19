@@ -37,7 +37,7 @@ export default function Navbar() {
                     <ul className="flex flex-col items-center justify-center px-4 gap-y-10 
                     text-secondary mt-[8rem] text-[1.2rem]">
                         <NavItem text="Home" page=""></NavItem>
-                        <NavItem text="Project Gallery" page=""></NavItem>
+                        <NavItem text="Project Gallery" page="/project-gallery"></NavItem>
                         <NavItem text="FAQs" page=""></NavItem>
                         <NavItem text="Contact" page=""></NavItem>
                     </ul>
