@@ -22,8 +22,8 @@ export default function Cover() {
 
             {isVisible && (
                 <div className="fixed flex items-center justify-center z-[100] gap-[5rem] top-[16rem] left-10 right-10">
-                    <h1 className="text-primary text-[8rem] text-center leading-[10rem] tracking-wide animate-welcome opacity-0">Welcome</h1>
-                    <h1 className="text-primary text-[8rem] text-center leading-[10rem] tracking-wide animate-to opacity-0">to</h1>
+                    <h1 className="text-primary text-[8rem] leading-[10rem] tracking-wide animate-welcome opacity-0">Welcome</h1>
+                    <h1 className="text-primary text-[8rem] leading-[10rem] tracking-wide animate-to opacity-0">to</h1>
                 </div>
             )}
         </>

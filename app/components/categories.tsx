@@ -3,7 +3,7 @@ export default function Categories() {
     function CategoryItemLeft({text, width}) {
         return(
             <div className="relative flex items-center">
-                <h1 className="text-[3rem] text-center text-primary bg-secondary px-6 py-4 rounded-[2rem]
+                <h1 className="text-[3rem] text-primary bg-secondary px-6 py-4 rounded-[2rem]
                 cursor-pointer hover:bg-accent duration-200">{text}</h1>
                 <div style={{ width: width }} className="h-[.7rem] bg-secondary right-[-16rem] top-[50%]"></div>
             </div>
@@ -13,7 +13,7 @@ export default function Categories() {
     function CategoryItemRight({text, width}) {
         return(
             <div className="relative flex items-center flex-row-reverse">
-                <h1 className="text-[3rem] text-center text-primary bg-secondary px-6 py-4 rounded-[2rem]
+                <h1 className="text-[3rem] text-primary bg-secondary px-6 py-4 rounded-[2rem]
                 cursor-pointer hover:bg-accent duration-200">{text}</h1>
                 <div style={{ width: width }} className="h-[.7rem] bg-secondary left-[-13.5rem] top-[50%]"></div>
             </div>
@@ -46,9 +46,9 @@ export default function Categories() {
         </div>
 
         <div className="flex justify-center items-end gap-4">
-            <h1 className="text-center tracking-wide pr-4">TRANSFORMING YOUR</h1>
+            <h1 className="tracking-wide pr-4">TRANSFORMING YOUR</h1>
             <img src="images/houses.png" className="w-[70px] pb-1"></img>
-            <h1 className="text-center tracking-wide">INTO A NEW HOME</h1>
+            <h1 className="tracking-wide">INTO A NEW HOME</h1>
         </div>
     </section>
     )

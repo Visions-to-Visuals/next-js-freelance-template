@@ -1,7 +1,7 @@
 export default function Contact() {
     return(
         <section className="bg-secondary tablet-s:px-[2rem] mobile:px-[1rem]">
-            <h1 className="text-primary text-center tracking-wide"
+            <h1 className="text-primary tracking-wide"
             >CONTACT US TODAY TO LEARN MORE
             </h1>
 
@@ -13,7 +13,7 @@ export default function Contact() {
                 className="rounded-2xl px-4 py-2"></input>
                 <textarea placeholder="We want to hear more about what you're looking for"
                 className="rounded-2xl p-4 h-[15rem]"></textarea>
-                <button className="bg-primary rounded-2xl p-3 font-[700] hover:bg-accent hover:text-primary duration-200">SEND MESSAGE</button>
+                <button className="bg-primary rounded-2xl p-3 font-[700] hover:bg-accent hover:text-primary duration-300">SEND MESSAGE</button>
             </div>
         </section>
         

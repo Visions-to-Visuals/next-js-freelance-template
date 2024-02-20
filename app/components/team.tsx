@@ -13,10 +13,7 @@ export default function Team() {
 
     return(
         <section className="bg-primary tablet-s:px-[2rem] mobile:px-[1rem]">
-            <h1 className="text-dark text-center 
-            tracking-wide mobile:px-[1rem]"
-            >MEET THE TEAM BEHIND THE MASTERPIECE
-            </h1>
+            <h1 className="text-dark tracking-wide mobile:px-[1rem]">MEET THE TEAM BEHIND THE MASTERPIECE</h1>
             <div className="flex justify-center items-center mt-[4rem] gap-14 mb-10 
             laptop-s:overflow-x-scroll tablet-s:justify-start laptop-s:gap-10">
                 <TeamItem name="Timothy Schoolland" image={"/images/team3.png"}></TeamItem>

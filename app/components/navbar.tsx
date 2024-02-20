@@ -35,7 +35,7 @@ export default function Navbar() {
                 <div className={`fixed top-0 bottom-0 z-10 bg-accent
                 duration-500 ease-in-out ${overlayVisible ? 'right-0' : '-right-[300px]'} w-[300px] mobile:w-[240px]`}>
                     <ul className="flex flex-col items-center justify-center px-4 gap-y-10 
-                    text-secondary mt-[8rem] text-[1.2rem]">
+                    text-primary mt-[8rem] text-[1.2rem]">
                         <NavItem text="Home" page=""></NavItem>
                         <NavItem text="Project Gallery" page="/project-gallery"></NavItem>
                         <NavItem text="FAQs" page=""></NavItem>
@@ -58,7 +58,7 @@ export default function Navbar() {
                 <ul className="flex flex-row items-center justify-center px-4 gap-x-8
                 text-primary text-[16px] laptop:text-[16px] laptop-s:text-[14px] tablet:text-[12px]">
                     <NavItem text="Home" page=""></NavItem>
-                    <NavItem text="Project Gallery" page=""></NavItem>
+                    <NavItem text="Project Gallery" page="/project-gallery"></NavItem>
                     <NavItem text="FAQs" page=""></NavItem>
                     <NavItem text="Contact" page=""></NavItem>
                 </ul>
