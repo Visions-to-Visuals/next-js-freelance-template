@@ -1,7 +1,7 @@
 import Background from "./components/background"
 import Navbar from "./components/navbar"
 import HeroSection from "./components/hero"
-import Benefits from "./components/benefits"
+import Experience from "./components/experience"
 import Categories from "./components/categories"
 import Team from "./components/team"
 import Contact from "./components/contact"
@@ -15,7 +15,7 @@ export default function Home() {
       <Navbar></Navbar>
       <HeroSection></HeroSection>
       <Categories></Categories>
-      <Benefits></Benefits>
+      <Experience></Experience>
       <Team></Team>
       <Contact></Contact>
     </>

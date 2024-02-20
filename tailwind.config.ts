@@ -87,6 +87,10 @@ const config: Config = {
       backgroundImage: {
         'background': "url('/images/background.jpg')",
       },
+
+      backgroundSection: {
+        'background': "url('/images/floorplan.png')",
+      },
     },
   },
   plugins: [],
