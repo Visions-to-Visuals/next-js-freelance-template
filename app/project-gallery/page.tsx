@@ -1,7 +1,15 @@
+import Navbar from "../components/navbar"
+import HeroSection from "../components/hero"
+import Categories from "../components/categories"
+import Contact from "../components/contact"
+
 export default function ProjectGallery() {
-    return (
-        <>
-            <h1>HELLO WORLD</h1>
-        </>
-    )
+  return (
+    <>
+      <Navbar></Navbar>
+      <HeroSection></HeroSection>
+      <Categories></Categories>
+      <Contact></Contact>
+    </>
+  )
 }
