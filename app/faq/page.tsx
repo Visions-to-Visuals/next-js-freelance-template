@@ -1,14 +1,14 @@
 import Navbar from "../components/navbar"
 import HeroSection from "../components/hero"
-import Categories from "../components/categories"
 import Contact from "../components/contact"
+import Faq from "../components/faq"
 
-export default function ProjectGallery() {
+export default function FaqPage() {
   return (
     <>
       <Navbar></Navbar>
       <HeroSection></HeroSection>
-      <Categories></Categories>
+      <Faq></Faq>
       <Contact></Contact>
     </>
   )

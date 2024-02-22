@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
-export default function Benefits() { 
+export default function Experience() { 
 
     function BenefitsItem( {text} ) {
         return(

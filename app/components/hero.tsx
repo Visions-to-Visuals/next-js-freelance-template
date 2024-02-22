@@ -23,13 +23,10 @@ export default function HeroSection() {
                 quis nostrud.
                 </p>
             </div>
+            
             <img className="h-[28rem]
             tablet-s:hidden" 
             src="images/timothy.png"></img>
-
-            {/* <Spline 
-            className="scale-[.9] w-0 h-0"
-            scene="https://prod.spline.design/vN4f6x7wwd09efct/scene.splinecode" /> */}
 
             <img className="hidden
             tablet-s:w-[90%] tablet-s:inline-block" 
