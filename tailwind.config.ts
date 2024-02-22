@@ -38,6 +38,7 @@ const config: Config = {
         bottomCover: "opening 1.2s ease-in-out forwards 2s",
         welcome: "translate 2s ease-in-out forwards .4s",
         to: "translate 1.5s ease-in-out forwards .8s",
+        // house: "rotate 500ms ease-in-out",
       },
 
       keyframes: {
@@ -81,6 +82,14 @@ const config: Config = {
           '75%': {opacity: '1', scale:"1.1" },
           '90%': {opacity: '0', scale:"1.1" },
           '100%': {opacity: '0', scale:"1.1", visibility: "hidden" },
+        },
+
+        rotate: {
+          // '0%': {rotate: "0 deg"},
+          // '100%': {rotate: "180 deg"}
+
+          // '0%': {transform: "rotate(0deg)"},
+          // '100%': {transform: "rotate(180deg)"},
         },
       },
 

@@ -17,11 +17,10 @@ export default function Faq() {
 
     function Container( { index, question, answer } ) {
         return(
-            <div className="w-[75%] mx-auto bg-primary rounded-3xl px-10 py-[2rem]">
-                <div className="flex justify-between items-center gap-10 cursor-pointer" onClick={() => toggleAnswer(index)}>
+            <div className="w-[70%] mx-auto bg-primary rounded-3xl px-10 py-[2rem]">
+                <div className="flex justify-between items-center cursor-pointer" onClick={() => toggleAnswer(index)}>
                     <p className="text-dark font-[600] text-[1.3rem] text-center select-none">{question}</p>
-                    <FontAwesomeIcon icon={faHouse} className={`w-[2.3rem] h-[2.3rem] mb-1 select-none text-secondary ${showAnswer[index] ? 'rotate-180' : ''}`}></FontAwesomeIcon>
-                    
+                    <FontAwesomeIcon icon={faHouse} className={`w-[2.3rem] h-[2.3rem] mb-1 select-none text-accent ${showAnswer[index] ? 'rotate-180' : ''}`}></FontAwesomeIcon>
                 </div>
 
                 {showAnswer[index] && (
