@@ -30,15 +30,14 @@ const config: Config = {
     extend: {
 
       animation:{
-        arrow: "glow 7s ease-in-out 5.4s infinite",
-        circle1: "glow1 7s ease-in-out 5.1s infinite",
-        circle2: "glow2 7s ease-in-out 4.8s infinite",
-        circle3: "glow3 7s ease-in-out 4.5s infinite",
+        arrow: "glow 7s ease-in-out 5.1s infinite",
+        circle1: "glow1 7s ease-in-out 4.8s infinite",
+        circle2: "glow2 7s ease-in-out 4.5s infinite",
+        circle3: "glow3 7s ease-in-out 4.2s infinite",
         topCover: "opening 1.5s ease-in-out forwards 1.8s",
         bottomCover: "opening 1.2s ease-in-out forwards 2s",
         welcome: "translate 2s ease-in-out forwards .4s",
         to: "translate 1.5s ease-in-out forwards .8s",
-        // house: "rotate 500ms ease-in-out",
       },
 
       keyframes: {
@@ -83,21 +82,13 @@ const config: Config = {
           '90%': {opacity: '0', scale:"1.1" },
           '100%': {opacity: '0', scale:"1.1", visibility: "hidden" },
         },
-
-        rotate: {
-          // '0%': {rotate: "0 deg"},
-          // '100%': {rotate: "180 deg"}
-
-          // '0%': {transform: "rotate(0deg)"},
-          // '100%': {transform: "rotate(180deg)"},
-        },
       },
 
       backgroundImage: {
         'background': "url('/images/background.jpg')",
       },
 
-      backgroundSection: {
+      floorplan: {
         'background': "url('/images/floorplan.png')",
       },
     },

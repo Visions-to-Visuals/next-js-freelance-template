@@ -1,3 +1,4 @@
+"use client"
 import Navbar from "../components/navbar"
 import HeroSection from "../components/hero"
 import Categories from "../components/categories"

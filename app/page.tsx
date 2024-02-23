@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <>
-      {/* <Cover></Cover> */}
+      <Cover></Cover>
       <Background></Background>
       <Navbar></Navbar>
       <HeroSection></HeroSection>

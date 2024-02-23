@@ -40,7 +40,7 @@ export default function Contact() {
         sendEmail();
     }
     return(
-        <section className="bg-secondary tablet-s:px-[2rem] mobile:px-[1rem]">
+        <section className="bg-secondary tablet-s:px-[2rem] mobile:px-[1rem] relative">
             <h1 className="text-primary tracking-wide">CONTACT US TODAY TO LEARN MORE</h1>
             <form className="flex flex-col py-[2rem] px-[4rem] tablet-s:px-[2rem] my-[3rem] rounded-2xl w-[55rem] tablet-s:w-[100%] m-auto 
             gap-8 font-[500] font-[Outfit] text-[1.2rem] text-dark duration-300 tablet-s:text-[1rem]" onSubmit={handleSubmit}>
@@ -52,6 +52,7 @@ export default function Contact() {
                 className="rounded-2xl p-4 h-[15rem]"></textarea>
                 <button type="submit" className="bg-primary rounded-2xl p-3 font-[700] hover:bg-accent hover:text-primary duration-300">SEND MESSAGE</button>
             </form>
+            <img src="images/floorplan.png" className="absolute top-0 left-0 h-[100%] w-[100%] opacity-20 z-[0] pointer-events-none" />
         </section>
     )
 }

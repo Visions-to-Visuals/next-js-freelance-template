@@ -33,9 +33,9 @@ export default function Team() {
             <motion.div
                 ref={ref}
                 className="flex flex-col z-[20]"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20, rotateZ: -10 }}
                 transition={{ ease: "easeInOut", duration: 0.5, delay }}
-                animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
+                animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20, rotateZ: inView ? 0 : -10 }}
             >
                 <motion.img
                     src={image}

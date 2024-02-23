@@ -17,21 +17,12 @@ export default function Experience() {
     }
 
     return(
-        <section className="bg-secondary tablet-s:px-[2rem] mobile:px-[1rem] h-screen overflow-y-auto">
+        <section className="tablet-s:px-[2rem] mobile:px-[1rem] h-screen overflow-y-auto relative">
             <h1 className="text-primary tracking-wide" >INTRODUCING OVER 50 YEARS OF EXPERIENCE</h1>
 
-            <div className="flex justify-center items-center mt-14 tablet-s:mt-10 mb-10 gap-24 tablet-s:flex-col-reverse tablet-s:gap-6">
-                <div className="flex flex-col justify-center items-start gap-5 w-[40rem] tablet-s:w-[100%]">
-                    <BenefitsItem 
-                    text="Insert a sentence from the company about Benefit Number 1. Insert another sentence about the benefit."></BenefitsItem>
-                    <BenefitsItem 
-                    text="Insert a sentence from the company about Benefit Number 2. Insert another sentence about the benefit."></BenefitsItem>
-                    <BenefitsItem 
-                    text="Insert a sentence from the company about Benefit Number 3. Insert another sentence about the benefit."></BenefitsItem>
-                    <BenefitsItem 
-                    text="Insert a sentence from the company about Benefit Number 4. Insert another sentence about the benefit."></BenefitsItem>
-                </div>
-            </div>
+
+
+            <img src="images/floorplan.png" className="absolute top-0 left-0 h-[100%] w-[100%] opacity-20 z-[0] pointer-events-none" />
         </section>
     )
 }

@@ -1,3 +1,4 @@
+"use client"
 import { useEffect, useState, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -51,9 +52,9 @@ export default function Categories() {
     }
 
     return(
-        <section className="bg-primary text-dark px-[2rem] relative min-h-[80vh]">
+        <section className="bg-primary text-dark px-[2rem] relative">
             <div className="flex justify-center">
-                <div className="w-[.8rem] h-screen bg-secondary absolute top-0 bottom-0 m-auto mx-0"></div>
+                <div className="w-[.8rem] bg-secondary absolute top-0 bottom-0 m-auto mx-0"></div>
             </div>
 
             <div className="flex justify-center items-center mt-[2rem] mb-14 gap-0 z-[20] tablet-s:flex-wrap tablet-s:gap-[4rem] tablet-s:mt-[2rem]">
