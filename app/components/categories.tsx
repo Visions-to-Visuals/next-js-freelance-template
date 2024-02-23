@@ -12,7 +12,7 @@ export default function Categories() {
     function CategoryItemLeft({text, width}) {
         const controls = useAnimation();
         const { ref, inView } = useInView({ threshold: 1 });
-        const reference = useRef(); // create a reference to the element
+        const reference = useRef<HTMLDivElement | null>(null);
         useEffect(() => {
 
             const handleScroll = () => {
