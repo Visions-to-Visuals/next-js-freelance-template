@@ -50,7 +50,7 @@ export default function Team() {
         { name: "Timothy Schoolland", image: "/images/team3.png" },
         { name: "Levi Sawyer", image: "/images/team1.png" },
         { name: "The Other Guy", image: "/images/team2.png" },
-        { name: "King Beeyn", image: "/images/team4.jpg" }
+        { name: "King Beeyn", image: "/images/team4.jpg" },
     ];
 
     return (
