@@ -1,46 +1,90 @@
-"use client"
-import { useState, useEffect } from "react"
+"use client";
+import { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { motion, useAnimation } from "framer-motion";
 import faqData from "./faq-data";
 
 export default function Faq() {
+    const [showAnswer, setShowAnswer] = useState(new Array(faqData.length).fill(false));
 
-    const [showAnswer, setShowAnswer] = useState<{ [key: string]: boolean }>({});
-
-    const toggleAnswer = (index: number) => {
-        setShowAnswer(prevState => {
-            const newState = { ...prevState };
-            newState[index] = !newState[index];
-            return newState; 
+    const toggleAnswer = (index) => {
+        setShowAnswer((prevState) => {
+            const newShowAnswer = [...prevState];
+            newShowAnswer[index] = !newShowAnswer[index];
+            for (let i = 0; i < newShowAnswer.length; i++) {
+                if (i !== index) {
+                    newShowAnswer[i] = false;
+                }
+            }
+            return newShowAnswer;
         });
     };
 
-    function Container( { index, question, answer } ) {
+    const Container = ({ index, question, answer }) => {
+        const containerRef = useRef(null);
         const controls = useAnimation();
- 
+
         const handleClick = () => {
             toggleAnswer(index);
         };
 
-        return(
-            <div className="w-[70%] mx-auto bg-primary rounded-3xl px-10 py-[2rem]">
+        useEffect(() => {
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting) {
+                        controls.start({ opacity: 1, transition: { duration: 1 } });
+                    }
+                },
+                { threshold: 1 }
+            );
+
+            if (containerRef.current) {
+                observer.observe(containerRef.current);
+            }
+
+            return () => {
+                if (containerRef.current) {
+                    observer.unobserve(containerRef.current);
+                }
+            };
+        }, [controls]);
+
+        return (
+            <motion.div
+                ref={containerRef}
+                className="w-[70%] mx-auto bg-primary rounded-3xl px-10 py-[2rem]"
+                initial={{ opacity: 0 }}
+                animate={controls}
+            >
                 <div className="flex justify-between items-center cursor-pointer" onClick={handleClick}>
                     <p className="text-dark font-[600] text-[1.3rem] text-center select-none">{question}</p>
-                    <motion.div animate={controls}>
-                        <FontAwesomeIcon icon={faHouse} className="w-[2.3rem] h-[2.3rem] mb-1 select-none text-accent"></FontAwesomeIcon>
-                    </motion.div>
+                    <div>
+                        <motion.div
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            animate={{ rotate: showAnswer[index] ? 180 : 0 }}
+                            transition={{ type: "spring", stiffness: 300, duration: .5 }}
+                        >
+                            <FontAwesomeIcon icon={faHouse} className="w-[2.3rem] h-[2.3rem] mb-1 select-none text-accent" />
+                        </motion.div>
+                    </div>
                 </div>
 
                 {showAnswer[index] && (
-                    <p className="bg-white mt-[2rem] mb-[.5rem] text-[1.1rem] text-dark ease-in-out duration-300 cursor-text">{answer}</p>
+                    <motion.p
+                        className="bg-white mt-[2rem] mb-[.5rem] text-[1.1rem] text-dark ease-in-out duration-300 cursor-text"
+                        initial={{ opacity: 0, y: -5 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -5 }}
+                        transition={{ duration: 0.4 }}
+                    >
+                        {answer}
+                    </motion.p>
                 )}
-            </div>
-        )
-    }
-
-    console.log(faqData)
+            </motion.div>
+        );
+    };
 
     const renderContainers = () => {
         return faqData.map((item, index) => (
@@ -54,3 +98,5 @@ export default function Faq() {
         </section>
     );
 }
+
+
