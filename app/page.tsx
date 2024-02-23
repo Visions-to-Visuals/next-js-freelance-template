@@ -1,3 +1,5 @@
+"use client"
+import { useEffect } from "react";
 import Background from "./components/background"
 import Navbar from "./components/navbar"
 import HeroSection from "./components/hero"
@@ -8,9 +10,13 @@ import Contact from "./components/contact"
 import Cover from "./components/cover"
 
 export default function Home() {
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual'
+  }, []);
+
   return (
     <>
-      <Cover></Cover>
+      {/* <Cover></Cover> */}
       <Background></Background>
       <Navbar></Navbar>
       <HeroSection></HeroSection>

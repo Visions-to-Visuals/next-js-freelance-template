@@ -1,7 +1,8 @@
 "use client"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { motion, useAnimation } from "framer-motion";
 
 export default function Faq() {
 
@@ -16,11 +17,25 @@ export default function Faq() {
     };
 
     function Container( { index, question, answer } ) {
+        const controls = useAnimation();
+        const [isRotated, setIsRotated] = useState<boolean>(false);
+ 
+        useEffect(() => {
+            controls.start({ rotate: isRotated ? 180 : 0 });
+        }, [isRotated, controls]);
+
+        const handleClick = () => {
+            toggleAnswer(index);
+            setIsRotated(prev => !prev);
+        };
+
         return(
             <div className="w-[70%] mx-auto bg-primary rounded-3xl px-10 py-[2rem]">
-                <div className="flex justify-between items-center cursor-pointer" onClick={() => toggleAnswer(index)}>
+                <div className="flex justify-between items-center cursor-pointer" onClick={handleClick}>
                     <p className="text-dark font-[600] text-[1.3rem] text-center select-none">{question}</p>
-                    <FontAwesomeIcon icon={faHouse} className={`w-[2.3rem] h-[2.3rem] mb-1 select-none text-accent ${showAnswer[index] ? 'rotate-180' : ''}`}></FontAwesomeIcon>
+                    <motion.div animate={controls}>
+                        <FontAwesomeIcon icon={faHouse} className="w-[2.3rem] h-[2.3rem] mb-1 select-none text-accent"></FontAwesomeIcon>
+                    </motion.div>
                 </div>
 
                 {showAnswer[index] && (

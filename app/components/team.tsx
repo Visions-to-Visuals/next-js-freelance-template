@@ -1,12 +1,49 @@
+"use client"
+import { useRef, useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { animate, stagger} from "framer-motion/dom"
+
 export default function Team() {
 
     function TeamItem( {name, image} ) {
+
+        const [hasAnimated, setHasAnimated] = useState(false);
+        const [inView, setInView] = useState(false);
+        const ref = useRef(null);
+
+        useEffect(() => {
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting && !hasAnimated) {
+                        setInView(true);
+                        setHasAnimated(true);
+                    }
+                },
+                { threshold: 0.6, }
+            );
+
+            if (ref.current) {
+                observer.observe(ref.current);
+            }
+
+            return () => {
+                if (ref.current) {
+                    observer.unobserve(ref.current);
+                }
+            };
+        }, [hasAnimated]);
+
         return(
-            <div className="flex flex-col cursor-pointer z-[20]">
-                <img src={image} className="rounded-3xl w-[16em] aspect-[2/3] object-cover laptop-s:w-[14rem]
-                hover:scale-[1.05] duration-300"></img>
+            <div className="flex flex-col z-[20]">
+                <motion.img src={image} ref={ref} className="rounded-3xl w-[16em] aspect-[2/3] object-cover laptop-s:w-[14rem]
+                hover:scale-[1.05] duration-300"
+                initial={{ opacity: 0, rotateZ: -20 }}
+                transition={{ ease: "easeIn", duration: .5}}
+                animate={{ opacity: inView ? 1 : 0, rotateZ: inView ? 0 : -20 }}
+                ></motion.img>
                 <p className="text-center mt-5 font-[500] font-[Outfit]
-                 text-dark text-[1.3rem] tablet-s:text-[1.1rem] z-[20]">{name}</p>
+                 text-dark text-[1.3rem] tablet-s:text-[1.1rem] z-[20]"
+                 >{name}</p>
             </div>
         )
     }

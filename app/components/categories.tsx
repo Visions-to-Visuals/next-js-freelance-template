@@ -1,3 +1,8 @@
+"use client"
+import { useEffect, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 export default function Categories() {
 
     function CategoryItemLeft({text, width}) {
@@ -20,12 +25,26 @@ export default function Categories() {
         )
     }
 
+    const [hasAnimated, setHasAnimated] = useState(false);
+    const { ref, inView } = useInView({ threshold: 1 });
 
+    useEffect(() => {
+        if (inView && !hasAnimated) {
+            setHasAnimated(true);
+        }
+    }, [inView, hasAnimated]);
 
     return(
     <section className="bg-primary text-dark px-[2rem] relative min-h-[80vh]">
         <div className="flex justify-center">
-            <div className="w-[.7rem] h-screen bg-secondary absolute top-0 bottom-0 m-auto mx-0"></div>
+            <motion.div 
+            className="w-[.7rem] h-screen bg-secondary absolute top-0 m-auto mx-0"
+            ref={ref}
+            initial={{ height: 0}} 
+            animate={{ height: hasAnimated ? "100vh" : 0}}
+            transition={ { duration: 1 } }
+            >
+            </motion.div>
         </div>
 
         <div className="flex justify-center items-center mt-[2rem] mb-14 gap-0 z-[20]
