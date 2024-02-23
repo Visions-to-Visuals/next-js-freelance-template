@@ -33,7 +33,7 @@ export default function Faq() {
             const observer = new IntersectionObserver(
                 ([entry]) => {
                     if (entry.isIntersecting) {
-                        controls.start({ opacity: 1, transition: { duration: 1 } });
+                        controls.start({ opacity: 1, transition: { duration: .5 } });
                     }
                 },
                 { threshold: 1 }
@@ -64,7 +64,7 @@ export default function Faq() {
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                             animate={{ rotate: showAnswer[index] ? 180 : 0 }}
-                            transition={{ type: "spring", stiffness: 300, duration: .5 }}
+                            transition={{ type: "spring", stiffness: 300, duration: .8 }}
                         >
                             <FontAwesomeIcon icon={faHouse} className="w-[2.3rem] h-[2.3rem] mb-1 select-none text-accent" />
                         </motion.div>
