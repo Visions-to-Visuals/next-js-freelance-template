@@ -1,12 +1,8 @@
-"use client"
 import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { animate, stagger} from "framer-motion/dom"
 
 export default function Team() {
-
-    function TeamItem( {name, image} ) {
-
+    function TeamItem({ name, image, delay }) {
         const [hasAnimated, setHasAnimated] = useState(false);
         const [inView, setInView] = useState(false);
         const ref = useRef(null);
@@ -19,7 +15,7 @@ export default function Team() {
                         setHasAnimated(true);
                     }
                 },
-                { threshold: 0.6, }
+                { threshold: 0.5 }
             );
 
             if (ref.current) {
@@ -33,32 +29,39 @@ export default function Team() {
             };
         }, [hasAnimated]);
 
-        return(
-            <div className="flex flex-col z-[20]">
-                <motion.img src={image} ref={ref} className="rounded-3xl w-[16em] aspect-[2/3] object-cover laptop-s:w-[14rem]
-                hover:scale-[1.05] duration-300"
-                initial={{ opacity: 0, rotateZ: -20 }}
-                transition={{ ease: "easeIn", duration: .5}}
-                animate={{ opacity: inView ? 1 : 0, rotateZ: inView ? 0 : -20 }}
-                ></motion.img>
-                <p className="text-center mt-5 font-[500] font-[Outfit]
-                 text-dark text-[1.3rem] tablet-s:text-[1.1rem] z-[20]"
-                 >{name}</p>
-            </div>
-        )
+        return (
+            <motion.div
+                ref={ref}
+                className="flex flex-col z-[20]"
+                initial={{ opacity: 0, y: 20 }}
+                transition={{ ease: "easeInOut", duration: 0.5, delay }}
+                animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
+            >
+                <motion.img
+                    src={image}
+                    className="rounded-3xl w-[16em] aspect-[2/3] object-cover laptop-s:w-[14rem]"
+                />
+                <p className="text-center mt-5 font-[500] font-[Outfit] text-dark text-[1.3rem] tablet-s:text-[1.1rem] z-[20]">{name}</p>
+            </motion.div>
+        );
     }
 
-    return(
+    const team = [
+        { name: "Timothy Schoolland", image: "/images/team3.png" },
+        { name: "Levi Sawyer", image: "/images/team1.png" },
+        { name: "The Other Guy", image: "/images/team2.png" },
+        { name: "King Beeyn", image: "/images/team4.jpg" }
+    ];
+
+    return (
         <section className="bg-primary relative tablet-s:px-[2rem] mobile:px-[1rem]">
             <h1 className="text-dark tracking-wide mobile:px-[1rem] z-[20]">MEET THE TEAM BEHIND THE MASTERPIECE</h1>
-            <div className="flex justify-center items-center mt-[4rem] gap-14 mb-10 z-[20]
-            laptop-s:overflow-x-scroll tablet-s:justify-start laptop-s:gap-10">
-                <TeamItem name="Timothy Schoolland" image={"/images/team3.png"}></TeamItem>
-                <TeamItem name="Levi Sawyer" image={"/images/team1.png"}></TeamItem>
-                <TeamItem name="The Other Guy" image={"/images/team2.png"}></TeamItem>
-                <TeamItem name="King Beeyn" image={"/images/team4.jpg"}></TeamItem>
+            <div className="flex justify-center items-center mt-[4rem] gap-14 mb-10 z-[20] laptop-s:overflow-x-scroll tablet-s:justify-start laptop-s:gap-10">
+                {team.map((person, index) => (
+                    <TeamItem key={index} name={person.name} image={person.image} delay={index * 0.2} />
+                ))}
             </div>
-            <img src="images/floorplan.png" className="absolute top-0 left-0 h-[100%] w-[100%] opacity-40 z-[0] pointer-events-none"></img>
+            <img src="images/floorplan.png" className="absolute top-0 left-0 h-[100%] w-[100%] opacity-40 z-[0] pointer-events-none" />
         </section>
-    )
+    );
 }

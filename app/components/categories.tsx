@@ -5,6 +5,25 @@ import { useInView } from "react-intersection-observer";
 
 export default function Categories() {
 
+    const [hasAnimated, setHasAnimated] = useState(false);
+    const { ref: divRef, inView: divInView } = useInView({ threshold: .80 });
+
+    const itemVariants = {
+        hidden: { opacity: 0, x: "-50px" },
+        visible: { opacity: 1, x: 0 }
+    };
+
+    const itemVariants2 = {
+        hidden: { opacity: 0, x: "50px" },
+        visible: { opacity: 1, x: 0 }
+    };
+
+    useEffect(() => {
+        if (divInView && !hasAnimated) {
+            setHasAnimated(true);
+        }
+    }, [divInView]);
+
     function CategoryItemLeft({text, width}) {
         return(
             <div className="relative flex items-center z-[20]">
@@ -25,26 +44,13 @@ export default function Categories() {
         )
     }
 
-    const [hasAnimated, setHasAnimated] = useState(false);
-    const { ref, inView } = useInView({ threshold: 1 });
-
-    useEffect(() => {
-        if (inView && !hasAnimated) {
-            setHasAnimated(true);
-        }
-    }, [inView, hasAnimated]);
-
     return(
     <section className="bg-primary text-dark px-[2rem] relative min-h-[80vh]">
         <div className="flex justify-center">
-            <motion.div 
-            className="w-[.7rem] h-screen bg-secondary absolute top-0 m-auto mx-0"
-            ref={ref}
-            initial={{ height: 0}} 
-            animate={{ height: hasAnimated ? "100vh" : 0}}
-            transition={ { duration: 1 } }
+            <div 
+            className="w-[.7rem] h-screen bg-secondary absolute top-0 bottom-0 m-auto mx-0"
             >
-            </motion.div>
+            </div>
         </div>
 
         <div className="flex justify-center items-center mt-[2rem] mb-14 gap-0 z-[20]
