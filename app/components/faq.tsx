@@ -54,7 +54,7 @@ export default function Faq() {
             <motion.div
                 ref={containerRef}
                 className="w-[70%] mx-auto bg-primary rounded-3xl px-10 py-[2rem]"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 1, y: 0 }}
                 animate={controls}
             >
                 <div className="flex justify-between items-center cursor-pointer" onClick={handleClick}>
