@@ -8,7 +8,7 @@ import faqData from "./faq-data";
 export default function Faq() {
     const [showAnswer, setShowAnswer] = useState(new Array(faqData.length).fill(false));
 
-    const toggleAnswer = (index) => {
+    const toggleAnswer = (index: number) => {
         setShowAnswer((prevState) => {
             const newShowAnswer = [...prevState];
             newShowAnswer[index] = !newShowAnswer[index];
@@ -33,7 +33,7 @@ export default function Faq() {
             const observer = new IntersectionObserver(
                 ([entry]) => {
                     if (entry.isIntersecting) {
-                        controls.start({ opacity: 1, transition: { duration: .5 } });
+                        controls.start({ opacity: 1, y:0, transition: { duration: .5 } });
                     }
                 },
                 { threshold: 1 }
@@ -54,7 +54,7 @@ export default function Faq() {
             <motion.div
                 ref={containerRef}
                 className="w-[70%] mx-auto bg-primary rounded-3xl px-10 py-[2rem]"
-                initial={{ opacity: 0 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={controls}
             >
                 <div className="flex justify-between items-center cursor-pointer" onClick={handleClick}>
@@ -98,5 +98,3 @@ export default function Faq() {
         </section>
     );
 }
-
-
