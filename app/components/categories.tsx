@@ -16,13 +16,10 @@ export default function Categories() {
         useEffect(() => {
 
             const handleScroll = () => {
-                console.log('scrolling');
                 // get the absolute position of the element
                 if (reference.current) {
                     const rect = reference.current.getBoundingClientRect();
                     const position = rect.bottom;
-                    console.log('pos: ', position); // logs the position of the element
-                    console.log('lineBottom: ', lineBottom); // logs the bottom position of the line
                     if (position < lineBottom) {
                         controls.start({ opacity: 1}, { duration: 0.4 });
                     }
@@ -57,13 +54,10 @@ export default function Categories() {
         useEffect(() => {
 
             const handleScroll = () => {
-                console.log('scrolling');
                 // get the absolute position of the element
                 if (reference.current) {
                     const rect = reference.current.getBoundingClientRect();
                     const position = rect.bottom;
-                    console.log('pos: ', position); // logs the position of the element
-                    console.log('lineBottom: ', lineBottom); // logs the bottom position of the line
                     if (position < lineBottom) {
                         controls.start({ opacity: 1}, { duration: 0.4 });
                     }

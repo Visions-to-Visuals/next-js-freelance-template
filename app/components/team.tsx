@@ -51,14 +51,18 @@ export default function Team() {
         { name: "Levi Sawyer", image: "/images/team1.png" },
         { name: "The Other Guy", image: "/images/team2.png" },
         { name: "King Beeyn", image: "/images/team4.jpg" },
+        { name: "Timothy Schoolland", image: "/images/team3.png" },
+        { name: "Levi Sawyer", image: "/images/team1.png" },
+        { name: "The Other Guy", image: "/images/team2.png" },
+        { name: "King Beeyn", image: "/images/team4.jpg" },
     ];
 
     return (
         <section className="bg-primary relative tablet-s:px-[2rem] mobile:px-[1rem]">
-            <h1 className="text-dark tracking-wide mobile:px-[1rem] z-[20]">MEET THE TEAM BEHIND THE MASTERPIECE</h1>
-            <div className="flex justify-center items-center mt-[4rem] gap-14 mb-10 z-[20] laptop-s:overflow-x-scroll tablet-s:justify-start laptop-s:gap-10">
+            <h1 className="text-dark tracking-wide mobile:px-[1rem] z-[20] mx-0">MEET THE TEAM BEHIND THE MASTERPIECE</h1>
+            <div className="flex justify-center flex-wrap w-[90%] mx-auto items-center mt-[4rem] gap-14 mb-[4rem] z-[20] laptop-s:overflow-x-scroll tablet-s:justify-start laptop-s:gap-10">
                 {team.map((person, index) => (
-                    <TeamItem key={index} name={person.name} image={person.image} delay={index * 0.2} />
+                    <TeamItem key={index} name={person.name} image={person.image} delay={index * 0.15} />
                 ))}
             </div>
             <img src="images/floorplan.png" className="absolute top-0 left-0 h-[100%] w-[100%] opacity-40 z-[0] pointer-events-none" />
