@@ -76,10 +76,10 @@ const config: Config = {
         },
 
         translate: {
-          '0%': {opacity: '0', scale:"1" },
+          '0%': {opacity: '0', scale:"1"},
           '20%': {opacity: '1', scale:"1.1"},
-          '75%': {opacity: '1', scale:"1.1" },
-          '90%': {opacity: '0', scale:"1.1" },
+          '75%': {opacity: '1', scale:"1.1"},
+          '90%': {opacity: '0', scale:"1.1"},
           '100%': {opacity: '0', scale:"1.1", visibility: "hidden" },
         },
       },

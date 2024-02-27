@@ -117,7 +117,7 @@ export default function Categories() {
     });
 
     return(
-        <section className="bg-primary text-dark px-[2rem] relative overflow-hidden" ref={sectionRef}>
+        <section className="bg-primary text-dark px-[2rem] relative overflow-hidden" id="categoriesSection" ref={sectionRef}>
             <div className="flex justify-center">
                 <div className="w-[.8rem] bg-secondary absolute top-0 bottom-0 m-auto mx-0" ref={centerLineRef}></div>
             </div>

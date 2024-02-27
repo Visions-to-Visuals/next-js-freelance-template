@@ -4,6 +4,17 @@ import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function HeroSection() {
+
+    const scrollToCategories = () => {
+        const categoriesSection = document.getElementById('categoriesSection');
+        if (categoriesSection) {
+            window.scrollTo({
+                top: categoriesSection.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    };
+
     return (
     <div className="min-h-[90vh] z-25">
         <div className="flex flex-row justify-center items-center gap-[6rem]
@@ -46,7 +57,7 @@ export default function HeroSection() {
             px-8 py-2 bg-primary rounded-[15px] hover:bg-accent hover:text-primary
             duration-200 ease-in
             tablet-s:text-[1.2rem] tablet-s:px-10 tablet-s:mt-4 mobile:mt-8 mobile:text-[1.4rem]"
-            >WHAT WE OFFER</button>
+            onClick={scrollToCategories}>WHAT WE OFFER</button>
         </div>
     </div>
     )
