@@ -23,7 +23,7 @@ export default function Navbar() {
     function NavItem( {text, page} ) {
         return (
             <a href={page}>
-                <li className="px-2 cursor-pointer font-[700] font-[Outfit] duration-300 hover:text-accent">{text}</li>
+                <li className="px-2 cursor-pointer font-[700] duration-300">{text}</li>
             </a>
         )
     }
@@ -35,11 +35,10 @@ export default function Navbar() {
                 <div className={`fixed top-0 bottom-0 z-10 bg-accent
                 duration-500 ease-in-out ${overlayVisible ? 'right-0' : '-right-[300px]'} w-[300px] mobile:w-[240px]`}>
                     <ul className="flex flex-col items-center justify-center px-4 gap-y-10 
-                    text-secondary mt-[8rem] text-[1.2rem]">
-                        <NavItem text="Home" page=""></NavItem>
-                        <NavItem text="Projects" page=""></NavItem>
-                        <NavItem text="FAQ" page=""></NavItem>
-                        <NavItem text="About" page=""></NavItem>
+                    text-primary mt-[8rem] text-[1.2rem]">
+                        <NavItem text="Home" page="/"></NavItem>
+                        <NavItem text="Project Gallery" page="/project-gallery"></NavItem>
+                        <NavItem text="FAQs" page="/faq"></NavItem>
                         <NavItem text="Contact" page=""></NavItem>
                     </ul>
                 </div>
@@ -55,14 +54,12 @@ export default function Navbar() {
 
             ):( 
 
-            <nav className="h-[6rem] flex justify-between items-center px-[2rem] tablet-s:h-[4rem]">
-                <img className="h-[3rem] cursor-pointer" src="favicon.ico"></img>
+            <nav className="h-[6rem] flex justify-end items-center px-[2rem] tablet-s:h-[4rem]">
                 <ul className="flex flex-row items-center justify-center px-4 gap-x-8
-                text-primary text-[18px] laptop:text-[16px] laptop-s:text-[14px] tablet:text-[12px]">
-                    <NavItem text="Home" page=""></NavItem>
-                    <NavItem text="Projects" page=""></NavItem>
-                    <NavItem text="FAQ" page=""></NavItem>
-                    <NavItem text="About" page=""></NavItem>
+                text-primary text-[16px] laptop:text-[16px] laptop-s:text-[14px] tablet:text-[12px]">
+                    <NavItem text="Home" page="/"></NavItem>
+                    <NavItem text="Project Gallery" page="/project-gallery"></NavItem>
+                    <NavItem text="FAQs" page="/faq"></NavItem>
                     <NavItem text="Contact" page=""></NavItem>
                 </ul>
             </nav>

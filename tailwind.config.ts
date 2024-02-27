@@ -9,10 +9,12 @@ const config: Config = {
   theme: {
 
     colors: {
-      primary: "#f2f5f2",    
-      secondary: "#202124",   
-      accent: "#69AAD3",  
-      background: "#131314"   
+      primary: "#FFFFFF",    
+      secondary: "#2B4C3B",   
+      accent: "#182C25",
+      dark: "#1E1E1E",
+      hover: "#dedede",
+      background: "#2B4C3B"   
     },
 
     screens: {
@@ -27,8 +29,67 @@ const config: Config = {
 
     extend: {
 
+      animation:{
+        arrow: "glow 7s ease-in-out 5.1s infinite",
+        circle1: "glow1 7s ease-in-out 4.8s infinite",
+        circle2: "glow2 7s ease-in-out 4.5s infinite",
+        circle3: "glow3 7s ease-in-out 4.2s infinite",
+        topCover: "opening 1.5s ease-in-out forwards 1.8s",
+        bottomCover: "opening 1.2s ease-in-out forwards 2s",
+        welcome: "translate 2s ease-in-out forwards .4s",
+        to: "translate 1.5s ease-in-out forwards .8s",
+      },
+
+      keyframes: {
+        glow: {
+          "0%": { opacity: "0" },
+          "20%": { opacity: ".8" },
+          "35%": { opacity: ".0" },
+          "100%": { opacity: "0" }
+        },
+
+        glow1: {
+          "0%": { opacity: "0" },
+          "20%": { opacity: ".6" },
+          "30%": { opacity: ".0" },
+          "100%": { opacity: "0" }
+        },
+
+        glow2: {
+          "0%": { opacity: "0" },
+          "20%": { opacity: ".4" },
+          "30%": { opacity: ".0" },
+          "100%": { opacity: "0" }
+        },
+
+        glow3: {
+          "0%": { opacity: "0" },
+          "20%": { opacity: ".2" },
+          "30%": { opacity: ".0" },
+          "100%": { opacity: "0" }
+        },
+
+        opening: {
+          "0%": {opacity: "1"},
+          "70%": {transform: "translateX(110vw)", opacity: "1"},
+          "100%": {transform: "translateX(110vw)", opacity: "0"},
+        },
+
+        translate: {
+          '0%': {opacity: '0', scale:"1" },
+          '20%': {opacity: '1', scale:"1.1"},
+          '75%': {opacity: '1', scale:"1.1" },
+          '90%': {opacity: '0', scale:"1.1" },
+          '100%': {opacity: '0', scale:"1.1", visibility: "hidden" },
+        },
+      },
+
       backgroundImage: {
-        // 'placeholder': "url('/images/placeholder.jpg')",
+        'background': "url('/images/background.jpg')",
+      },
+
+      floorplan: {
+        'background': "url('/images/floorplan.png')",
       },
     },
   },
