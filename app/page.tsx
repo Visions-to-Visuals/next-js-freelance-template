@@ -16,10 +16,13 @@ export default function Home() {
 
   return (
     <>
-      <Cover></Cover>
-      <Background></Background>
-      <Navbar></Navbar>
-      <HeroSection></HeroSection>
+      <div className="min-h-screen">
+        <Cover></Cover>
+        <Background></Background>
+        <Navbar></Navbar>
+        <HeroSection></HeroSection>
+      </div>
+
       <Categories></Categories>
       <Experience></Experience>
       <Team></Team>

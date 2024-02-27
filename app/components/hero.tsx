@@ -16,7 +16,7 @@ export default function HeroSection() {
     };
 
     return (
-    <div className="min-h-[90vh] z-25">
+    <div className="z-25">
         <div className="flex flex-row justify-center items-center gap-[6rem]
         tablet-s:flex-col tablet-s:items-center tablet-s:px-[2rem] tablet-s:gap-[3rem]
         mobile:mt-6 mobile:px-[1rem]">
@@ -37,10 +37,10 @@ export default function HeroSection() {
             <img className="h-[28rem]
             tablet-s:hidden" 
             src="images/timothy.png"></img>
-
+{/* 
             <img className="hidden
             tablet-s:w-[90%] tablet-s:inline-block" 
-            src="images/mobilephoto.jpg"></img>
+            src="images/mobilephoto.jpg"></img> */}
         </div>
 
         <div className="flex justify-center items-center mt-[7rem] pb-[7rem] relative">

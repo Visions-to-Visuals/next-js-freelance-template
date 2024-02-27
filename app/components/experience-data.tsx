@@ -14,6 +14,7 @@ const experienceData = [
         year: "2019",
         image: "images/experience3.png"
     }
+
 ];
 
 export default experienceData;

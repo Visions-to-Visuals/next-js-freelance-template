@@ -39,7 +39,7 @@ export default function Team() {
             >
                 <motion.img
                     src={image}
-                    className="rounded-3xl w-[16em] aspect-[2/3] object-cover laptop-s:w-[14rem]"
+                    className="rounded-3xl w-[14.5em] aspect-[2/3] object-cover laptop-s:w-[14rem]"
                 />
                 <p className="text-center mt-5 font-[500] font-[Outfit] text-dark text-[1.3rem] tablet-s:text-[1.1rem] z-[20]">{name}</p>
             </motion.div>
@@ -60,7 +60,8 @@ export default function Team() {
     return (
         <section className="bg-primary relative tablet-s:px-[2rem] mobile:px-[1rem]">
             <h1 className="text-dark tracking-wide mobile:px-[1rem] z-[20] mx-0">MEET THE TEAM BEHIND THE MASTERPIECE</h1>
-            <div className="flex justify-center flex-wrap w-[90%] mx-auto items-center mt-[4rem] gap-14 mb-[4rem] z-[20] laptop-s:overflow-x-scroll tablet-s:justify-start laptop-s:gap-10">
+            <div className="flex justify-center flex-wrap w-[80rem] mx-auto items-center mt-[4rem] gap-16 mb-[4rem] z-[20] 
+            tablet-s:justify-start max-w-[1500px]">
                 {team.map((person, index) => (
                     <TeamItem key={index} name={person.name} image={person.image} delay={index * 0.15} />
                 ))}
