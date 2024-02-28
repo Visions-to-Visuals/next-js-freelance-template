@@ -3,9 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
-export default function HeroSection() {
+export default function HeroSection({setScrollToCategories}) {
 
     const scrollToCategories = () => {
+        setScrollToCategories(true);
         const categoriesSection = document.getElementById('categoriesSection');
         if (categoriesSection) {
             window.scrollTo({

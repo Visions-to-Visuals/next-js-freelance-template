@@ -3,10 +3,34 @@ import { useEffect, useState, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-export default function Categories() {
+export default function Categories({scrollToCategories}) {
+    const centerLineRef = useRef(); 
+    // when the scrollToCategories prop changes, increase the scroll position
+    useEffect(() => {
+        if (scrollToCategories) {
+            let count = 0;
+            console.log('scrolling to categories');
+            const interval = setInterval(() => {
+                count++;
+                scrolledY += 5;
+                if (count%10 === 0){
+                   window.dispatchEvent(new Event('scroll'));
+                }
+                if (centerLineRef.current) {
+                    (centerLineRef.current as HTMLDivElement).style.transform = `translateY(${scrolledY}px)`;
+                } 
+
+
+                if (scrolledY > 0) {
+                    console.log('clearing interval');
+                    clearInterval(interval);
+                }
+            }, 10);
+        }
+    }, [scrollToCategories]);
     // ref for the section
     const sectionRef = useRef();
-    const centerLineRef = useRef(); 
+
     let scrolledY = -999999;
     let lineBottom = -999999;
     function CategoryItemLeft({text, width}) {
