@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Team() {
+    const [animate, setAnimate] = useState(false);
     function TeamItem({ name, image, delay }) {
         const [hasAnimated, setHasAnimated] = useState(false);
         const [inView, setInView] = useState(false);
@@ -10,9 +11,10 @@ export default function Team() {
         useEffect(() => {
             const observer = new IntersectionObserver(
                 ([entry]) => {
-                    if (entry.isIntersecting && !hasAnimated) {
+                    if (entry.isIntersecting && !hasAnimated || animate && !hasAnimated) { 
                         setInView(true);
                         setHasAnimated(true);
+                        setAnimate(true);
                     }
                 },
                 { threshold: 0.5 }
@@ -27,7 +29,7 @@ export default function Team() {
                     observer.unobserve(ref.current);
                 }
             };
-        }, [hasAnimated]);
+        }, [hasAnimated, animate]);
 
         return (
             <motion.div
