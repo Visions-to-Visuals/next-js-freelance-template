@@ -5,7 +5,7 @@ export default function Experience() {
 
     function ExperienceItem({ text, year, image }) {
         return (
-            <div className='flex justify-center mx-auto gap-[5rem] sticky top-[5rem] z-10 tablet-s:flex-col tablet-s:items-center tablet-s:top-[8rem]'>
+            <div className='flex justify-center mx-auto gap-[5rem] sticky top-[5rem] z-10 tablet-s:flex-col tablet-s:items-center tablet-s:top-[8rem] tablet-s:z-auto'>
                 <img src={image} className='w-[30rem] rounded-[2rem] tablet-s:w-[10rem] tablet-s:h-[8rem] tablet-s:hidden'></img>
                 <img src="images/circle.png" className='w-[5rem] h-[5rem] rounded-[2rem] tablet-s:z-[10]'></img>
                 <div className='flex-col w-[30rem] text-primary bg-accent px-[2rem] py-[1rem] rounded-[2rem] tablet-s:w-[28rem] laptop-s:z-[20]'>
