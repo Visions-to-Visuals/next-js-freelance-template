@@ -16,10 +16,11 @@ export default function Home() {
 
   return (
     <>
-      <div className="min-h-screen">
-        <Cover></Cover>
-        <Background></Background>
-        <Navbar></Navbar>
+      <Cover></Cover>
+      <Background></Background>
+      <Navbar></Navbar>
+
+      <div className="min-h-screen tablet-s:min-h-0 tablet-s:pt-[3rem]">
         <HeroSection></HeroSection>
       </div>
 

@@ -24,10 +24,10 @@ export default function HeroSection() {
             tablet-s:justify-center tablet-s:text-center tablet-s:w-[100%]">
                 <h1 className="text-[7rem] leading-[7rem]
                 tablet-s:w-[100%] tablet-s:text-[4rem] tablet-s:leading-[4rem] mobile:text-[4rem] mobile:leading-[4.5rem]">
-                    <span className="text-[8.2rem]">Schoolland</span> Construction
+                    <span className="text-[8.2rem] tablet-s:text-[15vw] tracking-wide">Schoolland</span> Construction
                 </h1>
                 <p className="text-[1.5rem] font-[500] mt-[3rem] pr-6 pl-4
-                tablet-s:text-[1.1rem] tablet-s:mt-[2rem] tablet-s:px-[4vw]">
+                tablet-s:text-[1.1rem] tablet-s:mt-[2rem] tablet-s:px-[3rem]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                 tempor incididunt ut labore et dolore magna ut aliqua. Ut enim ad minim veniam, 
                 quis nostrud.
@@ -37,10 +37,10 @@ export default function HeroSection() {
             <img className="h-[28rem]
             tablet-s:hidden" 
             src="images/timothy.png"></img>
-{/* 
+
             <img className="hidden
-            tablet-s:w-[90%] tablet-s:inline-block" 
-            src="images/mobilephoto.jpg"></img> */}
+            tablet-s:w-[0%] tablet-s:inline-block" 
+            src="images/timothy.png"></img>
         </div>
 
         <div className="flex justify-center items-center mt-[7rem] pb-[7rem] relative">

@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" 
     className="
-    monitor:text-[1.2rem]
+    monitor:text-[1.3rem]
     laptop:text-[.85rem] 
     laptop-s:text-[.75rem] 
     tablet:text-[1.2vw]
