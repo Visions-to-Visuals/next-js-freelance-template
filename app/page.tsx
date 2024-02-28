@@ -8,8 +8,10 @@ import Categories from "./components/categories"
 import Team from "./components/team"
 import Contact from "./components/contact"
 import Cover from "./components/cover"
+import { useState } from "react";
 
 export default function Home() {
+  const [scrollToCategories, setScrollToCategories] = useState(false);
   useEffect(() => {
     window.history.scrollRestoration = 'manual'
   }, []);
@@ -21,10 +23,10 @@ export default function Home() {
       <Navbar></Navbar>
 
       <div className="min-h-screen tablet-s:min-h-0 tablet-s:pt-[3rem]">
-        <HeroSection></HeroSection>
+        <HeroSection setScrollToCategories={setScrollToCategories}></HeroSection>
       </div>
 
-      <Categories></Categories>
+      <Categories scrollToCategories={scrollToCategories}></Categories>
       <Experience></Experience>
       <Team></Team>
       <Contact></Contact>
