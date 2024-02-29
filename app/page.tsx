@@ -11,7 +11,19 @@ import Cover from "./components/cover"
 import { useState } from "react";
 
 export default function Home() {
+
+  const [isMobile, setIsMobile] = useState(false);
   const [scrollToCategories, setScrollToCategories] = useState(false);
+
+  useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth <= 768);
+      };
+      handleResize();
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   useEffect(() => {
     window.history.scrollRestoration = 'manual'
   }, []);
@@ -20,12 +32,23 @@ export default function Home() {
     <>
       <Cover></Cover>
       <Background></Background>
-      <Navbar></Navbar>
 
-      <div className="min-h-screen tablet-s:min-h-0 tablet-s:pt-[3rem]">
-        <HeroSection setScrollToCategories={setScrollToCategories}></HeroSection>
-      </div>
-
+      {isMobile ? (
+        <>
+          <Navbar></Navbar>
+          <div className="min-h-screen tablet-s:min-h-0 tablet-s:pt-[3rem]">
+            <HeroSection setScrollToCategories={setScrollToCategories}></HeroSection>
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="min-h-screen tablet-s:min-h-0 tablet-s:pt-[3rem]">
+          <Navbar></Navbar>
+            <HeroSection setScrollToCategories={setScrollToCategories}></HeroSection>
+          </div>
+      </>
+      )
+    }
       <Categories scrollToCategories={scrollToCategories}></Categories>
       <Experience></Experience>
       <Team></Team>

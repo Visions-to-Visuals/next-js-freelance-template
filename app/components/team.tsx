@@ -62,7 +62,7 @@ export default function Team() {
     return (
         <section className="bg-primary relative tablet-s:px-[2rem] mobile:px-[1rem]">
             <h1 className="text-dark tracking-wide mobile:px-[1rem] z-[20] mx-0">MEET THE TEAM BEHIND THE MASTERPIECE</h1>
-            <div className="flex justify-center flex-wrap w-[80rem] tablet-s:w-[90%] mx-auto items-center mt-[4rem] gap-16 mb-[4rem] z-[20] 
+            <div className="flex justify-center flex-wrap w-[80rem] tablet-s:w-[90%] mobile:w-[100%] mx-auto items-center mt-[4rem] gap-16 mb-[4rem] z-[20] 
             tablet-s:justify-center max-w-[1500px] laptop-s:gap-10">
                 {team.map((person, index) => (
                     <TeamItem key={index} name={person.name} image={person.image} delay={index * 0.15} />

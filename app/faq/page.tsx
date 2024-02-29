@@ -6,10 +6,15 @@ import FaqHero from "../components/faq-hero"
 export default function FaqPage() {
   return (
     <>
-      <Navbar></Navbar>
-      <FaqHero></FaqHero>
-      <Faq></Faq>
+      <div className="relative">
+        <Navbar></Navbar>
+        <FaqHero></FaqHero>
+        <Faq></Faq>
+        <img src="images/floorplan.png" className="absolute top-0 left-0 h-[100%] w-[100%] opacity-20 z-[-1] pointer-events-none select-none" />
+      </div>
+
       <Contact></Contact>
     </>
+
   )
 }

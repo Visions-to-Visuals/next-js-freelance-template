@@ -8,7 +8,7 @@ export default function Experience() {
             <div className='flex justify-center mx-auto gap-[5rem] sticky top-[5rem] z-10 tablet-s:flex-col tablet-s:items-center tablet-s:top-[8rem] tablet-s:z-auto'>
                 <img src={image} className='w-[30rem] rounded-[2rem] tablet-s:w-[10rem] tablet-s:h-[8rem] tablet-s:hidden'></img>
                 <img src="images/circle.png" className='w-[5rem] h-[5rem] rounded-[2rem] tablet-s:z-[10]'></img>
-                <div className='flex-col w-[30rem] text-primary bg-accent px-[2rem] py-[1rem] rounded-[2rem] tablet-s:w-[28rem] laptop-s:z-[20]'>
+                <div className='flex-col w-[30rem] text-primary bg-accent px-[2rem] py-[1rem] rounded-[2rem] tablet-s:w-[28rem] mobile:w-[90%] laptop-s:z-[20]'>
                     <h2 className='text-[3rem] font-[600] tracking-widest tablet-s:text-center'>{year}</h2>
                     <p className='text-[1.2rem] tablet-s:text-[1rem] tablet-s:text-center tablet-s:mb-4'>{text}</p>
                 </div>

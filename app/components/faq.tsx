@@ -93,7 +93,7 @@ export default function Faq() {
     };
 
     return (
-        <section className="flex flex-col gap-y-[3rem]">
+        <section className="flex flex-col gap-y-[3rem] relative">
             {renderContainers()}
         </section>
     );
