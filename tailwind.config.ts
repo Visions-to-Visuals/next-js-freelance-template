@@ -38,6 +38,9 @@ const config: Config = {
         bottomCover: "opening 1.2s ease-in-out forwards 2s",
         welcome: "translate 2s ease-in-out forwards .4s",
         to: "translate 1.5s ease-in-out forwards .8s",
+        fadeIn : "translateY 800ms ease-in-out",
+        faq : "translateYY 400ms ease-in-out forwards 1s",
+        background: "fadeIn 3s ease-in-out"
       },
 
       keyframes: {
@@ -81,6 +84,21 @@ const config: Config = {
           '75%': {opacity: '1', scale:"1.1"},
           '90%': {opacity: '0', scale:"1.1"},
           '100%': {opacity: '0', scale:"1.1", visibility: "hidden" },
+        },
+
+        translateY: {
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+          '0%': { transform: 'translateY(10px)', opacity: '0' },
+        },
+
+        translateYY: {
+          '0%': { transform: 'translateY(30px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+
+        fadeIn: {
+          '100%': { opacity: '.2' },
+          '0%': { opacity: '0' },
         },
       },
 

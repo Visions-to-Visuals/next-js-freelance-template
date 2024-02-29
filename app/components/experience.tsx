@@ -1,4 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
+import { useInView } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import experienceData from './experience-data';
 
 export default function Experience() {
