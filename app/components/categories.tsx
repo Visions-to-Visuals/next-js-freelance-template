@@ -173,6 +173,7 @@ export default function Categories({ scrollToCategories }) {
         <div
           className="w-[.8rem] bg-secondary absolute top-0 bottom-0 m-auto mx-0"
           ref={centerLineRef}
+          style={{ transform: `translateY(-200%)` }}
         ></div>
       </div>
 
