@@ -57,8 +57,8 @@ export default function Faq() {
                 initial={{ opacity: 1, y: 0 }}
                 animate={controls}
             >
-                <div className="flex justify-between items-center cursor-pointer" onClick={handleClick}>
-                    <p className="text-dark font-[600] text-[1.3rem] text-center select-none tablet-s:text-[1rem] tablet-s:text-left">{question}</p>
+                <div className="flex justify-between items-center cursor-pointer mobile:items-start" onClick={handleClick}>
+                    <p className="text-dark font-[600] text-[1.3rem] text-center select-none tablet-s:text-[1rem] tablet-s:text-left mr-3">{question}</p>
                     <div>
                         <motion.div
                             whileHover={{ scale: 1.1 }}
@@ -66,7 +66,7 @@ export default function Faq() {
                             animate={{ rotate: showAnswer[index] ? 180 : 0 }}
                             transition={{ type: "spring", stiffness: 300, duration: .8 }}
                         >
-                            <FontAwesomeIcon icon={faHouse} className="w-[2.3rem] h-[2.3rem] mb-1 tablet-s:mb-0 select-none text-accent tablet-s:w-[1.6rem] tablet-s:h-[1.6rem] tablet-s:px-4" />
+                            <FontAwesomeIcon icon={faHouse} className="w-[2.3rem] h-[2.3rem] mb-1 select-none text-accent tablet-s:w-[1.6rem] tablet-s:h-[1.6rem]" />
                         </motion.div>
                     </div>
                 </div>

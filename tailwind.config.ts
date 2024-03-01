@@ -40,7 +40,8 @@ const config: Config = {
         to: "translate 1.5s ease-in-out forwards .8s",
         fadeIn : "translateY 800ms ease-in-out",
         faq : "translateYY 400ms ease-in-out forwards 1s",
-        background: "fadeIn 3s ease-in-out"
+        background: "fadeIn 3s ease-in-out",
+        navbarr: "fade 2s ease-in-out forward 2s"
       },
 
       keyframes: {
@@ -99,6 +100,11 @@ const config: Config = {
         fadeIn: {
           '100%': { opacity: '.2' },
           '0%': { opacity: '0' },
+        },
+
+        fade: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
         },
       },
 

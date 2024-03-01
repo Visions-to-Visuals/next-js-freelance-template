@@ -31,22 +31,27 @@ export default function Home() {
   return (
     <>
       <Cover></Cover>
-      <Background></Background>
 
       {isMobile ? (
         <>
           <Navbar></Navbar>
-          <div className="min-h-screen tablet-s:min-h-0 tablet-s:pt-[3rem]">
+          <div className="relative">
             <HeroSection setScrollToCategories={setScrollToCategories}></HeroSection>
+            <div className="flex justify-center">
+              <img className="hidden z-[-1] absolute bottom-0 tablet-s:w-[21rem] mobile:w-[24rem] tablet-s:inline-block" 
+              src="images/TimothyTransparent.png">
+              </img>
+            </div>
           </div>
         </>
       ) : (
         <>
-          <div className="min-h-screen tablet-s:min-h-0 tablet-s:pt-[3rem]">
+        <Background></Background>
+          <div className="min-h-screen">
           <Navbar></Navbar>
             <HeroSection setScrollToCategories={setScrollToCategories}></HeroSection>
           </div>
-      </>
+        </>
       )
     }
       <Categories scrollToCategories={scrollToCategories}></Categories>
