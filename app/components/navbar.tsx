@@ -39,14 +39,14 @@ export default function Navbar() {
 
     if (isMobile === null) {
         return (
-            <nav className="h-[6rem] flex justify-end items-center px-[2rem] tablet-s:h-[4rem]">
+            <nav className="absolute h-[6rem] flex justify-end items-center px-[2rem] tablet-s:h-[4rem]">
 
             </nav>
         )
     }
 
     return (
-        <div className="absolute top-0 right-0 z-[50] tablet-s:sticky">
+        <div className="absolute top-0 right-0 z-[40] tablet-s:sticky">
             {isMobile ? (
                 <nav className={`h-[4.5rem] flex justify-between items-center px-[4vw] top-0 z-[40] duration-300 absolute w-full  ${scrollPosition > 0 ? 'bg-accent' : 'bg-transparent'}`}>
                     <div className={`fixed top-0 bottom-0 z-10 bg-accent duration-500 ease-in-out ${overlayVisible ? 'right-0' : '-right-[300px]'} w-[300px] mobile:w-[240px]`}>

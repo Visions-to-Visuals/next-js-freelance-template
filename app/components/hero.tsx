@@ -26,7 +26,7 @@ export default function HeroSection({setScrollToCategories}) {
 
         <div className="flex flex-row justify-center items-center gap-[6rem]
         tablet-s:flex-col tablet-s:items-center tablet-s:px-[2rem] tablet-s:gap-[3rem]
-        pt-[6rem] mobile:pt-[6rem] mobile:px-[1rem]">
+        pt-[6rem] mobile:px-[1rem]">
             <div className="w-[42rem] max-w-[45rem] tablet-s:max-w-[100%] text-primary 
             tablet-s:justify-center tablet-s:text-center tablet-s:w-[100%]">
                 <h1 className="text-[7rem] leading-[7rem]

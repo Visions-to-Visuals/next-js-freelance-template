@@ -40,8 +40,7 @@ const config: Config = {
         to: "translate 1.5s ease-in-out forwards .8s",
         fadeIn : "translateY 800ms ease-in-out",
         faq : "translateYY 400ms ease-in-out forwards 1s",
-        background: "fadeIn 3s ease-in-out",
-        navbarr: "fade 2s ease-in-out forward 2s"
+        background: "fadeIn 3s ease-in-out"
       },
 
       keyframes: {
@@ -88,13 +87,13 @@ const config: Config = {
         },
 
         translateY: {
-          '100%': { transform: 'translateY(0)', opacity: '1' },
           '0%': { transform: 'translateY(10px)', opacity: '0' },
+          '100%': { transform: 'translateY(0px)', opacity: '1' },
         },
 
         translateYY: {
           '0%': { transform: 'translateY(30px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
+          '100%': { transform: 'translateY(0px)', opacity: '1' },
         },
 
         fadeIn: {
