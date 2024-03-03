@@ -46,3 +46,15 @@ h1 {
 		@apply w-[100%];
 	}
 }
+
+@layer utilities {
+	.category {
+		@apply relative tracking-wider;
+	}
+	.category::after {
+		@apply content-[''] bg-[#ffffff] h-[4px] w-[0%] left-0 -bottom-[0px] rounded-full absolute duration-300;
+	}
+	.category:hover::after {
+		@apply w-[100%];
+	}
+}
