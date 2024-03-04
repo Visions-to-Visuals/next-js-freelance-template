@@ -1,7 +1,8 @@
-// api/send-email/route.tsx
+// api/send-email/route.js
 // file for sending emails
 import sendEmail from "./email";
-export async function POST(request: { json: () => any; }) {
+
+async function POST(request) {
   const body = await request.json();
   const { name, email, message } = body;
   try {
@@ -42,3 +43,5 @@ export async function POST(request: { json: () => any; }) {
     });
   }
 }
+
+export { POST };
