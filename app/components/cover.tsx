@@ -21,9 +21,9 @@ export default function Cover() {
             </div>
 
             {isVisible && (
-                <div className="fixed flex items-center justify-center z-[100] gap-[5rem] top-[16rem] w-[100%] mx-auto tablet-s:top-[12rem] mobile:top-[16rem]">
-                    <h1 className="text-primary text-[8rem] leading-[10rem] tracking-wide animate-welcome opacity-0 tablet-s:text-[10vw] mobile:text-[12vw]">Welcome to</h1>
-                    {/* <h1 className="text-primary text-[8rem] leading-[10rem] tracking-wide animate-welcome opacity-0">to</h1> */}
+                <div className="fixed flex items-center justify-center z-[100] gap-[5rem] top-[16rem] left-10 right-10">
+                    <h1 className="text-primary text-[8rem] leading-[10rem] tracking-wide animate-welcome opacity-0">Welcome</h1>
+                    <h1 className="text-primary text-[8rem] leading-[10rem] tracking-wide animate-to opacity-0">to</h1>
                 </div>
             )}
         </>

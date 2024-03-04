@@ -1,40 +1,27 @@
-import { useState, useRef } from 'react';
-import { useInView } from "framer-motion";
-import { motion, useAnimation } from "framer-motion";
-import experienceData from './experience-data';
+"use client"
+import { useState, useEffect, useRef } from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
-export default function Experience() {
+export default function Experience() { 
 
-    function ExperienceItem({ text, year, image }) {
-        return (
-            <div className='flex justify-center mx-auto gap-[5rem] tablet-s:gap-[2rem] mobile:gap-[3rem] sticky top-[5rem] z-10 tablet-s:flex-col tablet-s:items-center tablet-s:top-[7rem] mobile:top-[8rem]'>
-                <img src={image} className='w-[30rem] rounded-[2rem] tablet-s:w-[18rem] tablet-s:rounded-[1.5rem] mobile:w-[20rem]'></img>
-                <img src="images/circle.png" className='w-[5rem] h-[5rem] rounded-[2rem] tablet-s:z-[10] tablet-s:hidden'></img>
-                <div className='flex-col w-[30rem] text-primary bg-accent px-[2rem] tablet-s:px-[1rem] py-[1rem] rounded-[2rem] tablet-s:w-[26rem] mobile:w-[22rem] laptop-s:z-[20]'>
-                    <h2 className='text-[3rem] font-[600] tracking-widest tablet-s:text-center tablet-s:text-[2rem] mobile:mb-2'>{year}</h2>
-                    <p className='text-[1.2rem] tablet-s:text-[1rem] tablet-s:text-center tablet-s:mb-4'>{text}</p>
-                </div>
-                <img src="images/circle.png" className='w-[5rem] h-[5rem] rounded-[2rem] tablet-s:z-[10] hidden tablet-s:flex'></img>
-            </div>
+    function BenefitsItem( {text} ) {
+        return(
+        <div className='flex gap-5 items-start hover:bg-secondary duration-200 p-5 rounded-3xl 
+        tablet-s:p-4 tablet-s:gap-3'>
+            <FontAwesomeIcon icon={faCheck} className="text-primary w-[1.2rem] pt-1 min-w-[1.2rem]"/>
+            <p className="font-[500] font-[Outfit] bg-transparent
+            text-primary text-[1.3rem] tablet-s:text-[1.1rem]">{text}</p>
+        </div>
         )
     }
 
-    return (
-        <section className="px-[2rem] mobile:px-[1rem] relative">
-            <h1 className="text-primary tracking-wide mb-[5rem]">INTRODUCING OVER 50 YEARS OF EXPERIENCE</h1>
-            <div className="flex justify-center">
-                <div className="w-[.8rem] bg-primary absolute top-[15rem] bottom-0 m-auto mx-0 tablet-s:top-[17rem] mobile:top-[22rem]"></div>
-            </div>
-            <div className='flex flex-col gap-[30rem] mb-[20rem] laptop-s:mb-[10rem]'>
-                {experienceData.map((item, index) => (
-                    <ExperienceItem
-                        key={index}
-                        text={item.text}
-                        year={item.year}
-                        image={item.image}
-                    />
-                ))}
-            </div>
+    return(
+        <section className="tablet-s:px-[2rem] mobile:px-[1rem] h-screen overflow-y-auto relative">
+            <h1 className="text-primary tracking-wide" >INTRODUCING OVER 50 YEARS OF EXPERIENCE</h1>
+
+
+
             <img src="images/floorplan.png" className="absolute top-0 left-0 h-[100%] w-[100%] opacity-20 z-[0] pointer-events-none" />
         </section>
     )
