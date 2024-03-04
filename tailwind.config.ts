@@ -23,7 +23,7 @@ const config: Config = {
       'laptop-s': {'max': '1250px'},      // 1024px up to 1250px
       'tablet': {'max': '1024px'},        // 768px up to 1024px
       'tablet-s': {'max': '768px'},       // 480px up to 768px
-      'mobile': {'max': '480px'},         // 340px up to 480px
+      'mobile': {'max': '500px'},         // 340px up to 480px
       'mobile-s': {'max': '340px'},       // 0px up to 340px
     },
 
@@ -38,6 +38,9 @@ const config: Config = {
         bottomCover: "opening 1.2s ease-in-out forwards 2s",
         welcome: "translate 2s ease-in-out forwards .4s",
         to: "translate 1.5s ease-in-out forwards .8s",
+        fadeIn : "translateY 800ms ease-in-out",
+        faq : "translateYY 400ms ease-in-out forwards 1s",
+        background: "fadeIn 3s ease-in-out"
       },
 
       keyframes: {
@@ -76,11 +79,31 @@ const config: Config = {
         },
 
         translate: {
-          '0%': {opacity: '0', scale:"1" },
+          '0%': {opacity: '0', scale:"1"},
           '20%': {opacity: '1', scale:"1.1"},
-          '75%': {opacity: '1', scale:"1.1" },
-          '90%': {opacity: '0', scale:"1.1" },
+          '75%': {opacity: '1', scale:"1.1"},
+          '90%': {opacity: '0', scale:"1.1"},
           '100%': {opacity: '0', scale:"1.1", visibility: "hidden" },
+        },
+
+        translateY: {
+          '0%': { transform: 'translateY(10px)', opacity: '0' },
+          '100%': { transform: 'translateY(0px)', opacity: '1' },
+        },
+
+        translateYY: {
+          '0%': { transform: 'translateY(30px)', opacity: '0' },
+          '100%': { transform: 'translateY(0px)', opacity: '1' },
+        },
+
+        fadeIn: {
+          '100%': { opacity: '.2' },
+          '0%': { opacity: '0' },
+        },
+
+        fade: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
         },
       },
 

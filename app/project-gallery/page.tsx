@@ -1,6 +1,5 @@
-"use client"
 import Navbar from "../components/navbar"
-import HeroSection from "../components/hero"
+import GalleryHero from "../components/gallery-hero"
 import Categories from "../components/categories"
 import Contact from "../components/contact"
 
@@ -8,8 +7,7 @@ export default function ProjectGallery() {
   return (
     <>
       <Navbar></Navbar>
-      <HeroSection></HeroSection>
-      <Categories></Categories>
+      <GalleryHero></GalleryHero>
       <Contact></Contact>
     </>
   )
