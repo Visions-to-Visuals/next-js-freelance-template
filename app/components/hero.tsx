@@ -1,38 +1,67 @@
-export default function HeroSection() {
+"use client"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+
+export default function HeroSection({setScrollToCategories}) {
+
+    const scrollToCategories = () => {
+        setScrollToCategories(true);
+        const categoriesSection = document.getElementById('categoriesSection');
+        if (categoriesSection) {
+            window.scrollTo({
+                top: categoriesSection.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    };
+
     return (
-    <>
-        <div className="flex flex-row justify-center items-top gap-[5rem] mt-14 
-        tablet-s:flex-col tablet-s:items-center tablet-s:4 tablet-s:px-[2rem] tablet-s:gap-[3rem]
-        mobile:mt-6 mobile:px-[1rem]">
-            <div className="w-[42rem] max-w-[45rem] tabelt-s:max-w-[100%] font-[Outfit] text-primary 
+    <div className="z-25">
+
+        <div className="bg-background bg-cover bg-no-repeat bg-center 
+             w-full h-full absolute z-[-1] hidden tablet-s:flex"></div>
+        <div className="absolute w-full h-full bg-cover
+           bg-[#182C25] opacity-80 z-[-1] hidden tablet-s:flex"></div>
+
+        <div className="flex flex-row justify-center items-center gap-[6rem]
+        tablet-s:flex-col tablet-s:items-center tablet-s:px-[2rem] tablet-s:gap-[3rem]
+        pt-[6rem] mobile:px-[1rem]">
+            <div className="w-[42rem] max-w-[45rem] tablet-s:max-w-[100%] text-primary 
             tablet-s:justify-center tablet-s:text-center tablet-s:w-[100%]">
-                <h1 className="text-[7rem] leading-[7rem] font-[700] 
+                <h1 className="text-[7rem] leading-[7rem]
                 tablet-s:w-[100%] tablet-s:text-[4rem] tablet-s:leading-[4rem] mobile:text-[4rem] mobile:leading-[4.5rem]">
-                    Name of the Company
+                    <span className="text-[8.2rem] tablet-s:text-[15vw] tracking-wide">Schoolland</span> Construction
                 </h1>
-                <p className="text-[1.5rem] font-[500] mt-[4rem] pr-6 pl-2
-                tablet-s:text-[1.1rem] tablet-s:mt-[2rem] tablet-s:px-[4vw]">
+                <p className="text-[1.5rem] font-[500] mt-[3rem] pr-6 pl-4
+                tablet-s:text-[1.1rem] tablet-s:mt-[2rem] tablet-s:px-[3rem]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                 tempor incididunt ut labore et dolore magna ut aliqua. Ut enim ad minim veniam, 
-                quis nostrud exercitation ullamco laboris aliquip commodo consequat.
+                quis nostrud.
                 </p>
             </div>
-            <img className="h-[30rem] rounded-3xl
-            tablet-s:hidden" 
-            src="images/photo.jpg"></img>
-
-            <img className="rounded-3xl hidden
-            tablet-s:w-[90%] tablet-s:inline-block" 
-            src="images/mobilephoto.jpg"></img>
+            
+            <img className="h-[28rem] tablet-s:hidden" src="images/schoolland.png"></img>
         </div>
 
-        <div className="flex justify-center items-center mt-10 pb-[7rem]">
-            <button className="font-[Outfit] font-[600] text-primary flex text-[1.5rem] 
-            px-8 py-2 bg-secondary rounded-[15px] hover:bg-accent hover:text-secondary 
+        <div className="flex justify-center items-center my-[7rem] tablet-s:mb-[6rem] tablet-s:mt-[14rem] mobile:mt-[18rem] relative">
+
+                <FontAwesomeIcon icon={faCircle}
+                className="absolute top-[-9rem] tablet-s:top-[-8rem] text-primary w-[1rem] h-[1rem] opacity-0 animate-circle3 tablet-s:hidden"></FontAwesomeIcon>
+                <FontAwesomeIcon icon={faCircle} 
+                className="absolute top-[-7.5rem] tablet-s:top-[-6.5rem] text-primary w-[1.5rem] h-[1.5rem] opacity-0 animate-circle2 tablet-s:hidden"></FontAwesomeIcon>
+                <FontAwesomeIcon icon={faCircle} 
+                className="absolute top-[-5.5rem] tablet-s:top-[-4.5rem] text-primary w-[2rem] h-[2rem] opacity-0 animate-circle1 tablet-s:hidden"></FontAwesomeIcon>
+                <FontAwesomeIcon icon={faAngleDown}
+                className="absolute top-[-4rem] tablet-s:top-[-3rem] text-primary w-[3.5rem] h-[3.5rem] opacity-0 animate-arrow tablet-s:hidden"></FontAwesomeIcon>
+
+            <button className="font-[600] text-dark flex text-[1.5rem] 
+            px-8 py-2 bg-primary rounded-[15px] hover:bg-accent hover:text-primary
             duration-200 ease-in
             tablet-s:text-[1.2rem] tablet-s:px-10 tablet-s:mt-4 mobile:mt-8 mobile:text-[1.4rem]"
-            >Explore the Galaxy</button>
+            onClick={scrollToCategories}>WHAT WE OFFER
+            </button>
         </div>
-    </>
+    </div>
     )
 }
