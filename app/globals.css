@@ -13,6 +13,7 @@
 html 
 {
   font-size: 1rem;
+  scroll-behavior: unset;
 }
 
 body

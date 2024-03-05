@@ -32,7 +32,7 @@ export default function Navbar() {
     function NavItem({ text, page }) {
         return (
             <a href={page}>
-                <li className="px-2 cursor-pointer font-[700] duration-300">{text}</li>
+                <li className="px-2 mobile:px-10 mobile:py-2 cursor-pointer font-[700] duration-300" onClick={toggleOverlay}>{text}</li>
             </a>
         );
     }
@@ -50,11 +50,11 @@ export default function Navbar() {
             {isMobile ? (
                 <nav className={`h-[4.5rem] flex justify-between items-center px-[4vw] top-0 z-[40] duration-300 absolute w-full  ${scrollPosition > 0 ? 'bg-accent' : 'bg-transparent'}`}>
                     <div className={`fixed top-0 bottom-0 z-10 bg-accent duration-500 ease-in-out ${overlayVisible ? 'right-0' : '-right-[300px]'} w-[300px] mobile:w-[240px]`}>
-                        <ul className="flex flex-col items-center justify-center  gap-y-10 text-primary mt-[8rem] text-[1.2rem]">
+                        <ul className="flex flex-col items-center justify-center gap-y-10 text-primary mt-[8rem] text-[1.2rem]">
                             <NavItem text="Home" page="/" />
                             <NavItem text="Project Gallery" page="/project-gallery" />
                             <NavItem text="FAQ" page="/faq" />
-                            <NavItem text="Contact" page="" />
+                            <NavItem text="Contact" page="#contact"/>
                         </ul>
                     </div> 
                     <img className="h-[2.2rem] cursor-pointer" src="favicon.ico" />
@@ -71,7 +71,7 @@ export default function Navbar() {
                         <NavItem text="Home" page="/" />
                         <NavItem text="Project Gallery" page="/project-gallery" />
                         <NavItem text="FAQ" page="/faq" />
-                        <NavItem text="Contact" page="" />
+                        <NavItem text="Contact" page="#contact" />
                     </ul>
                 </nav>
             )}

@@ -1,6 +1,7 @@
 "use client"
 import React, { useRef } from 'react';
 import categories from "./gallery-data";
+import Image from 'next/image';
 
 export default function Gallery() {
 
@@ -23,9 +24,9 @@ export default function Gallery() {
         );
     }
 
-    function Image({ image }: { image: string }) {
+    function Images({ image }: { image: string }) {
         return (
-            <img src={image} className="w-[27rem] tablet-s:w-[47%] rounded-xl" alt="Gallery Image" />
+            <Image src={image} width={200} height={200} className="w-[27rem] tablet-s:w-[47%] rounded-xl" alt="Gallery Image" />
         );
     }
 
@@ -38,7 +39,7 @@ export default function Gallery() {
                 <div className="flex flex-wrap w-[57rem] gap-[2rem] mt-[2rem] justify-center mb-[8rem] tablet-s:w-[90%] 
                 tablet-s:mx-auto tablet-s:gap-x-[1rem]">
                     {images.map((image, index) => (
-                        <Image key={index} image={image} />
+                        <Images key={index} image={image} />
                     ))}
                 </div>
             </div>

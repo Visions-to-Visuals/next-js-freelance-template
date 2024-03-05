@@ -1,6 +1,3 @@
-import { useState, useRef } from 'react';
-import { useInView } from "framer-motion";
-import { motion, useAnimation } from "framer-motion";
 import experienceData from './experience-data';
 
 export default function Experience() {
@@ -8,7 +5,7 @@ export default function Experience() {
     function ExperienceItem({ text, year, image }) {
         return (
             <div className='flex justify-center mx-auto gap-[5rem] tablet-s:gap-[2rem] mobile:gap-[3rem] sticky top-[5rem] z-10 tablet-s:flex-col tablet-s:items-center tablet-s:top-[7rem] mobile:top-[8rem]'>
-                <img src={image} className='w-[30rem] rounded-[2rem] tablet-s:w-[18rem] tablet-s:rounded-[1.5rem] mobile:w-[20rem]'></img>
+                <img src={image} className='w-[30rem] aspect-[3/2] rounded-[2rem] tablet-s:w-[18rem] tablet-s:rounded-[1.5rem] mobile:w-[20rem]'></img>
                 <img src="images/circle.png" className='w-[5rem] h-[5rem] rounded-[2rem] tablet-s:z-[10] tablet-s:hidden'></img>
                 <div className='flex-col w-[30rem] text-primary bg-accent px-[2rem] tablet-s:px-[1rem] py-[1rem] rounded-[2rem] tablet-s:w-[26rem] mobile:w-[22rem] laptop-s:z-[20]'>
                     <h2 className='text-[3rem] font-[600] tracking-widest tablet-s:text-center tablet-s:text-[2rem] mobile:mb-2'>{year}</h2>
