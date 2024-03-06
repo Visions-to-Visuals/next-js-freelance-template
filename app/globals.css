@@ -36,6 +36,13 @@ h1 {
   text-align: center;
 }
 
+.custom-gradient {
+    background-image: linear-gradient(to right, #FF3131, #FFB648);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
 @layer utilities {
 	ul li {
 		@apply relative tracking-wider;

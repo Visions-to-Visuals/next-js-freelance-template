@@ -1,5 +1,5 @@
 "use client"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Background from "./components/background"
 import Navbar from "./components/navbar"
 import HeroSection from "./components/hero"
@@ -8,7 +8,7 @@ import Categories from "./components/categories"
 import Team from "./components/team"
 import Contact from "./components/contact"
 import Cover from "./components/cover"
-import { useState } from "react";
+import Footer from "./components/footer";
 
 export default function Home() {
 
@@ -58,6 +58,8 @@ export default function Home() {
       <Experience></Experience>
       <Team></Team>
       <Contact></Contact>
+      <Footer></Footer>
+
     </>
   )
 }
