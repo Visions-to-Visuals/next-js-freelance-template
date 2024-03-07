@@ -5,6 +5,7 @@ const categories = [
     { text: "Fireplaces", images: ["/images/fireplace1.jpg", "/images/fireplace2.jpg", "/images/fireplace3.jpg", "/images/fireplace4.jpg"] },
     { text: "Closets", images: ["/images/closet1.jpg", "/images/closet2.jpg", "/images/closet3.jpg", "/images/closet4.jpg"] },
     { text: "New Homes", images: ["/images/house1.jpg", "/images/house2.jpg", "/images/house3.jpg", "/images/house4.jpg", "/images/house5.jpg", "/images/house6.jpg"] }, 
+    { text: "Other", images: ["/images/additions1.jpg", "/images/additions2.jpg", "/images/additions3.jpg", "/images/additions4.jpg"] }, 
 ];
 
 export default categories;

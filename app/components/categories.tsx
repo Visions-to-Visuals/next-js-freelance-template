@@ -183,12 +183,12 @@ export default function Categories({ scrollToCategories }) {
         ></div>
       </div>
 
-      <div className="flex justify-center items-center mt-[2rem] mb-14 gap-0 z-[10] tablet-s:flex-wrap tablet-s:flex-col tablet-s:gap-y-[4rem]">
+      <div className="flex justify-center items-center mt-[2rem] mb-14 gap-0 z-[10] tablet-s:flex-wrap tablet-s:flex-col-reverse tablet-s:gap-y-[4rem]">
         <div className="flex flex-col gap-y-[5rem] tablet-s:gap-y-[4rem]">
           <CategoryItemLeft text="KITCHENS" width="18.2rem"></CategoryItemLeft>
           <CategoryItemLeft text="OUTDOOR" width="17.5rem"></CategoryItemLeft>
           <CategoryItemLeft text="CLOSETS" width="20rem"></CategoryItemLeft>
-          <CategoryItemLeft text="ADDITIONS" width="16.4rem"></CategoryItemLeft>
+          <CategoryItemLeft text="OTHER" width="23rem"></CategoryItemLeft>
         </div>
 
         <div className="flex flex-col gap-y-[5rem] tablet-s:gap-y-[4rem]">

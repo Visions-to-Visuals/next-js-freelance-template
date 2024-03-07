@@ -13,7 +13,7 @@ export default function Gallery() {
             if (element) {
                 const offsetTop = element.getBoundingClientRect().top + window.scrollY;
                 window.scrollTo({
-                    top: offsetTop - 40, 
+                    top: offsetTop, 
                     behavior: 'smooth',
                 });
             }
@@ -35,7 +35,7 @@ export default function Gallery() {
         return (
             <div key={text} ref={categoryRefs[index]} id={text.toLowerCase()}>
                 <h2 className="text-primary text-[2.5rem] font-[600] bg-accent rounded-3xl w-[57rem] px-6 py-2 uppercase 
-                tablet-s:w-[90%] tablet-s:mx-auto tablet-s:text-[2.2rem]">{text}</h2>
+                tablet-s:w-[90%] tablet-s:mx-auto tablet-s:text-[2.2rem] mt-8">{text}</h2>
                 <div className="flex flex-wrap w-[57rem] gap-[2rem] mt-[2rem] justify-center mb-[8rem] tablet-s:w-[90%] 
                 tablet-s:mx-auto tablet-s:gap-x-[1rem]">
                     {images.map((image, index) => (
@@ -48,7 +48,7 @@ export default function Gallery() {
 
     return (
         <section className="flex justify-center gap-[6rem] animate-faq opacity-0">
-            <div className="text-primary text-[1.5rem] font-[500] flex flex-col gap-y-[2rem] h-fit sticky top-[3rem] tablet-s:hidden" id='bathroom'>
+            <div className="text-primary text-[1.5rem] font-[500] flex flex-col gap-y-[2rem] h-fit sticky top-[3rem] tablet-s:hidden">
                 {categories.map((category, index) => (
                     <Category key={index} text={category.text} index={index} />
                 ))}
