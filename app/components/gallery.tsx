@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function Gallery() {
 
     const categoryRefs = categories.map(() => useRef<HTMLDivElement | null>(null));
-
+    
     function Category({ text, index }: { text: string; index: number }) {
         const handleClick = () => {
             const element = categoryRefs[index]?.current;
