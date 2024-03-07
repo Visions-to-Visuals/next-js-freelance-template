@@ -9,6 +9,7 @@ import Team from "./components/team"
 import Contact from "./components/contact"
 import Cover from "./components/cover"
 import Footer from "./components/footer";
+import Image from "next/image";
 
 export default function Home() {
 
@@ -38,9 +39,9 @@ export default function Home() {
           <div className="relative">
             <HeroSection setScrollToCategories={setScrollToCategories}></HeroSection>
             <div className="flex justify-center">
-              <img className="hidden z-[-1] absolute bottom-0 tablet-s:w-[21rem] mobile:w-[24rem] tablet-s:inline-block" 
-              src="images/TimothyTransparent.png">
-              </img>
+              <Image width={500} height={500} alt="Timothy Schoolland" className="hidden z-[-1] absolute bottom-0 tablet-s:w-[21rem] mobile:w-[24rem] tablet-s:inline-block" 
+              src="/images/TimothyTransparent.png">
+              </Image>
             </div>
           </div>
         </>

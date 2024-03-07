@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 
 export default function Navbar() {
     const [isMobile, setIsMobile] = useState(null);
@@ -57,7 +58,7 @@ export default function Navbar() {
                             <NavItem text="Contact" page="#contact"/>
                         </ul>
                     </div> 
-                    <img className="h-[2.2rem] cursor-pointer" src="favicon.ico" />
+                    <img alt="favicon" className="h-[2.2rem] cursor-pointer" src="favicon.ico" />
                     <FontAwesomeIcon
                         icon={overlayVisible ? faXmark : faBars}
                         className="cursor-pointer text-3xl z-10 px-4"
