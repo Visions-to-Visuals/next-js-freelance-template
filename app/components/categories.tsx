@@ -38,6 +38,8 @@ export default function Categories({ scrollToCategories }) {
 
   let scrolledY = -999999;
   let lineBottom = -999999;
+
+
   function CategoryItemLeft({ text, width }) {
     const controls = useAnimation();
     const { ref, inView } = useInView({ threshold: 1 });
@@ -66,20 +68,22 @@ export default function Categories({ scrollToCategories }) {
     }, [lineBottom]); // re-run the effect when the lineBottom changes
 
     return (
-      <motion.div
-        className="relative flex items-center z-[20] tablet-s:justify-center"
-        ref={reference} // attach the ref to the element
-        initial={{ opacity: 0 }}
-        animate={controls}
-      >
-        <h1 className="text-[3rem] tablet-s:text-[2.5rem] tablet-s:px-[3rem] tablet-s:py-[.5rem] text-primary bg-secondary px-6 py-4 rounded-[2rem] cursor-pointer hover:bg-accent duration-200">
-          {text}
-        </h1>
-        <div
-          style={{ width: width }}
-          className="h-[.8rem] bg-secondary right-[-16rem] top-[50%] tablet-s:hidden"
-        ></div>
-      </motion.div>
+      <a href={`../project-gallery#${text.toLowerCase()}`}>
+        <motion.div
+          className="relative flex items-center z-[20] tablet-s:justify-center"
+          ref={reference} // attach the ref to the element
+          initial={{ opacity: 0 }}
+          animate={controls}
+        >
+          <h1 className="text-[3rem] tablet-s:text-[2.5rem] tablet-s:px-[3rem] tablet-s:py-[.5rem] text-primary bg-secondary px-6 py-4 rounded-[2rem] cursor-pointer hover:bg-accent duration-200">
+            {text}
+          </h1>
+          <div
+            style={{ width: width }}
+            className="h-[.8rem] bg-secondary right-[-16rem] top-[50%] tablet-s:hidden"
+          ></div>
+        </motion.div>
+      </a>
     );
   }
 
@@ -113,20 +117,22 @@ export default function Categories({ scrollToCategories }) {
     }, [lineBottom]); // re-run the effect when the lineBottom changes
 
     return (
-      <motion.div
-        className="relative flex items-center flex-row-reverse z-[10] tablet-s:justify-center"
-        ref={reference}
-        initial={{ opacity: 0 }}
-        animate={controls}
-      >
-        <h1 className="text-[3rem] tablet-s:text-[2.5rem] tablet-s:px-[3rem] tablet-s:py-[.5rem] text-primary bg-secondary px-6 py-4 rounded-[2rem] cursor-pointer hover:bg-accent duration-200">
-          {text}
-        </h1>
-        <div
-          style={{ width: width }}
-          className="h-[.8rem] bg-secondary left-[-13.5rem] top-[50%] tablet-s:hidden"
-        ></div>
-      </motion.div>
+      <a href={`../project-gallery#${text.toLowerCase()}`}>
+        <motion.div
+          className="relative flex items-center flex-row-reverse z-[10] tablet-s:justify-center"
+          ref={reference}
+          initial={{ opacity: 0 }}
+          animate={controls}
+        >
+          <h1 className="text-[3rem] tablet-s:text-[2.5rem] tablet-s:px-[3rem] tablet-s:py-[.5rem] text-primary bg-secondary px-6 py-4 rounded-[2rem] cursor-pointer hover:bg-accent duration-200">
+            {text}
+          </h1>
+          <div
+            style={{ width: width }}
+            className="h-[.8rem] bg-secondary left-[-13.5rem] top-[50%] tablet-s:hidden"
+          ></div>
+        </motion.div>
+      </a>
     );
   }
 
