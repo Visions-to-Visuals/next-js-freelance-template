@@ -1,11 +1,15 @@
 "use client"
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState, createRef } from 'react';
 import categories from "./gallery-data";
 import Image from 'next/image';
 
 export default function Gallery() {
 
-    const categoryRefs = categories.map(() => useRef<HTMLDivElement | null>(null));
+    const [categoryRefs, setCategoryRefs] = useState([]);
+
+    useEffect(() => {
+        setCategoryRefs((refs) => Array(categories.length).fill(null).map((_, i) => refs[i] || createRef()));
+    }, []);
     
     function Category({ text, index }: { text: string; index: number }) {
         const handleClick = () => {
