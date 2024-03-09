@@ -13,6 +13,7 @@
 html 
 {
   font-size: 1rem;
+  scroll-behavior: unset;
 }
 
 body
@@ -35,6 +36,13 @@ h1 {
   text-align: center;
 }
 
+.custom-gradient {
+    background-image: linear-gradient(to right, #FF3131, #FFB648);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
 @layer utilities {
 	ul li {
 		@apply relative tracking-wider;
@@ -43,6 +51,18 @@ h1 {
 		@apply content-[''] bg-[#ffffff] h-[3px] w-[0%] left-0 -bottom-[5px] rounded-3xl absolute duration-300;
 	}
 	ul li:hover::after {
+		@apply w-[100%];
+	}
+}
+
+@layer utilities {
+	.category {
+		@apply relative tracking-wider;
+	}
+	.category::after {
+		@apply content-[''] bg-[#ffffff] h-[4px] w-[0%] left-0 -bottom-[0px] rounded-full absolute duration-300;
+	}
+	.category:hover::after {
 		@apply w-[100%];
 	}
 }

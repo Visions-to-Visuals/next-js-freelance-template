@@ -2,6 +2,8 @@ import Navbar from "../components/navbar"
 import Contact from "../components/contact"
 import Faq from "../components/faq"
 import FaqHero from "../components/faq-hero"
+import Footer from "../components/footer"
+
 
 export default function FaqPage() {
   return (
@@ -14,6 +16,7 @@ export default function FaqPage() {
       </div>
 
       <Contact></Contact>
+      <Footer></Footer>
     </>
 
   )
