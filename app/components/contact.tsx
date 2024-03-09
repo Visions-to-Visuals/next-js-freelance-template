@@ -5,7 +5,10 @@ export default function Contact() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [emailSending, setEmailSending] = useState(false);
     function sendEmail() {
+        if (emailSending) return;
+        setEmailSending(true);
         // Send email
         fetch("api/send-email", {
             method: "POST",
@@ -20,17 +23,29 @@ export default function Contact() {
         })
         .then((response) => {
             if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+                throw response;
             }
             return response.json();
         })
         .then((data) => {
             console.log(data);
-            alert("Email sent");
+            alert(data.message);
+            // reload the page to clear the form
+            window.location.reload();
         })
         .catch((error) => {
-            console.error('There was an error!', error);
-            alert("There was an error sending the email");
+            if (error.status === 500) {
+                // Handle 500 status differently
+                // Assuming the error response is also in JSON format
+                error.json().then((errorData: { message: any; }) => {
+                    console.error('There was an error!', errorData);
+                    alert(errorData.message); // alert with the message from the server
+                });
+            } else {
+                console.error('There was an error!', error);
+                alert("There was an error sending the email");
+            }
+            setEmailSending(false); // let the user try again
         });
     }
 
