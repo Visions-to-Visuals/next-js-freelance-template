@@ -2,6 +2,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 
 export default function HeroSection({setScrollToCategories}) {
 
@@ -41,7 +42,10 @@ export default function HeroSection({setScrollToCategories}) {
                 </p>
             </div>
             
-            <img className="h-[28rem] tablet-s:hidden" src="images/schoolland.png"></img>
+            <div className="h-[28rem] w-[22rem]">
+                <Image width={100} height={100} layout="responsive" alt="Schoolland" className="tablet-s:hidden" src="/images/schoolland.png"></Image>
+            </div>
+       
         </div>
 
         <div className="flex justify-center items-center my-[7rem] tablet-s:mb-[6rem] tablet-s:mt-[14rem] mobile:mt-[18rem] relative">

@@ -201,12 +201,6 @@ export default function Categories({ scrollToCategories }) {
         </div>
       </div>
 
-      {/* <div className="flex justify-center items-end gap-6 z-[20]">
-                <h1 className="tracking-wide pr-4">TRANSFORMING YOUR</h1>
-                <img src="images/houses.png" className="w-[70px] pb-1"></img>
-                <h1 className="tracking-wide">INTO A NEW HOME</h1>
-            </div> */}
-
       <img
         src="images/floorplan.png"
         className="absolute top-0 left-0 h-[100%] w-[100%] opacity-40 pointer-events-none"
