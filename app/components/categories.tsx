@@ -2,6 +2,7 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 
 export default function Categories({ scrollToCategories }) {
   const centerLineRef = useRef();
@@ -201,10 +202,7 @@ export default function Categories({ scrollToCategories }) {
         </div>
       </div>
 
-      <img
-        src="images/floorplan.png"
-        className="absolute top-0 left-0 h-[100%] w-[100%] opacity-40 pointer-events-none"
-      ></img>
+      <Image width={400} height={400} alt="background" src="/images/floorplan.png" className="absolute top-0 left-0 h-[100%] w-[100%] opacity-30 pointer-events-none"/>
     </section>
   );
 }

@@ -33,7 +33,7 @@ export default function Experience() {
                     />
                 ))}
             </div>
-            <img src="images/floorplan.png" className="absolute top-0 left-0 h-[100%] w-[100%] opacity-20 z-[0] pointer-events-none" />
+            <Image width={400} height={400} alt='background' src="/images/floorplan.png" className="absolute top-0 left-0 h-[100%] w-[100%] opacity-20 z-[0] pointer-events-none" />
         </section>
     )
 }

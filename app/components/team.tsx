@@ -40,7 +40,10 @@ export default function Team() {
                 transition={{ ease: "easeInOut", duration: 0.5, delay }}
                 animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20, rotateZ: inView ? 0 : -10 }}
             >
-                <motion.img
+                <Image
+                    width={200}
+                    height={200}
+                    alt="team"
                     src={image}
                     className="rounded-3xl w-[14.5em] aspect-[2/3] object-cover tablet-s:w-[11rem]"
                 />
@@ -69,7 +72,7 @@ export default function Team() {
                     <TeamItem key={index} name={person.name} image={person.image} delay={index * 0.15} />
                 ))}
             </div>
-            <img src="images/floorplan.png" className="absolute top-0 left-0 h-[100%] w-[100%] opacity-40 z-[0] pointer-events-none" />
+            <Image width={400} height={400} alt="background" src="/images/floorplan.png" className="absolute top-0 left-0 h-[100%] w-[100%] opacity-30 pointer-events-none"/>
         </section>
     );
 }

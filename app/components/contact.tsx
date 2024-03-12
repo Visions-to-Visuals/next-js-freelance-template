@@ -1,5 +1,6 @@
 'use client'
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Contact() {
     const [name, setName] = useState('');
@@ -67,7 +68,7 @@ export default function Contact() {
                 className="rounded-2xl p-4 h-[15rem] z-[10] tablet-s:h-[12rem] resize-none"></textarea>
                 <button type="submit" className="bg-primary rounded-2xl p-3 font-[700] hover:bg-accent hover:text-primary duration-300 z-[10]">SEND MESSAGE</button>
             </form>
-            <img src="images/floorplan.png" className="absolute top-0 left-0 h-[100%] w-[100%] opacity-20 z-[0] pointer-events-none" />
+            <Image width={400} height={400} alt="background" src="/images/floorplan.png" className="absolute top-0 left-0 h-[100%] w-[100%] opacity-[15%] z-[0] pointer-events-none" />
         </section>
     )
 }
