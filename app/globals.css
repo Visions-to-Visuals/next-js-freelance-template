@@ -43,6 +43,26 @@ h1 {
     color: transparent;
 }
 
+
+.backgroundRepeater {
+	position: relative;
+  }
+  
+  .backgroundRepeater::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('/images/floorplan.png');
+	background-repeat: repeat;
+	opacity: 0.1;
+	z-index: -1;
+	pointer-events: none;
+	animation: fadeIn 3s ease-in-out;
+  }
+
 @layer utilities {
 	ul li {
 		@apply relative tracking-wider;

@@ -3,16 +3,16 @@ import Contact from "../components/contact"
 import Faq from "../components/faq"
 import FaqHero from "../components/faq-hero"
 import Footer from "../components/footer"
+import Image from "next/image"
 
 
 export default function FaqPage() {
   return (
     <>
-      <div className="relative">
+      <div className="backgroundRepeater">
         <Navbar></Navbar>
         <FaqHero></FaqHero>
         <Faq></Faq>
-        <img src="images/floorplan.png" className="absolute top-0 left-0 h-[100%] w-[100%] opacity-20 z-[-1] pointer-events-none select-none animate-background" />
       </div>
 
       <Contact></Contact>

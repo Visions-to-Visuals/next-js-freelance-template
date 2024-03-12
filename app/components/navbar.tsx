@@ -49,7 +49,7 @@ export default function Navbar() {
     return (
         <div className="absolute top-0 right-0 z-[40] tablet-s:sticky">
             {isMobile ? (
-                <nav className={`h-[4.5rem] flex justify-between items-center px-[4vw] top-0 z-[40] duration-300 absolute w-full  ${scrollPosition > 0 ? 'bg-accent' : 'bg-transparent'}`}>
+                <nav className={`h-[4.5rem] flex justify-end items-center px-[4vw] top-0 z-[40] duration-300 absolute w-full  ${scrollPosition > 0 ? 'bg-accent' : 'bg-transparent'}`}>
                     <div className={`fixed top-0 bottom-0 z-10 bg-accent duration-500 ease-in-out ${overlayVisible ? 'right-0' : '-right-[300px]'} w-[300px] mobile:w-[240px]`}>
                         <ul className="flex flex-col items-center justify-center gap-y-10 text-primary mt-[8rem] text-[1.2rem]">
                             <NavItem text="Home" page="/" />
@@ -58,7 +58,7 @@ export default function Navbar() {
                             <NavItem text="Contact" page="#contact"/>
                         </ul>
                     </div> 
-                    <img alt="favicon" className="h-[2.2rem] cursor-pointer" src="favicon.ico" />
+                   
                     <FontAwesomeIcon
                         icon={overlayVisible ? faXmark : faBars}
                         className="cursor-pointer text-3xl z-10 px-4"
