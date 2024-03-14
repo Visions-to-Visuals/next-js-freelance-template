@@ -53,11 +53,11 @@ export default function Faq() {
         return (
             <motion.div
                 ref={containerRef}
-                className="w-[70%] mx-auto bg-primary rounded-3xl px-10 py-[2rem] tablet-s:w-[85%] mobile:w-[90%] tablet-s:px-6 tablet-s:py-[1.2rem]"
+                className="w-[70%] mx-auto bg-primary rounded-3xl tablet-s:w-[85%] mobile:w-[90%]"
                 initial={{ opacity: 1, y: 0 }}
                 animate={controls}
             >
-                <div className="flex justify-between items-center cursor-pointer mobile:items-start" onClick={handleClick}>
+                <div className="flex justify-between items-center cursor-pointer mobile:items-start py-[2rem] tablet-s:py-[1.2rem] px-10 tablet-s:px-5" onClick={handleClick}>
                     <p className="text-dark font-[600] text-[1.3rem] text-center select-none tablet-s:text-[1rem] tablet-s:text-left mr-3">{question}</p>
                     <div>
                         <motion.div
@@ -73,7 +73,7 @@ export default function Faq() {
 
                 {showAnswer[index] && (
                     <motion.p
-                        className="bg-white mt-[2rem] mb-[.5rem] text-[1.1rem] tablet-s:text-[1rem] text-dark ease-in-out duration-300 cursor-text"
+                        className="bg-white pb-[2rem] tablet-s:pb-[1.5rem] text-[1.1rem] tablet-s:text-[1rem] text-dark ease-in-out duration-300 cursor-text px-10 tablet-s:px-5"
                         initial={{ opacity: 0, y: -5 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -5 }}
