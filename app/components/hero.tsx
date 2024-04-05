@@ -28,17 +28,15 @@ export default function HeroSection({setScrollToCategories}) {
         <div className="flex flex-row justify-center items-center gap-[6rem]
         tablet-s:flex-col tablet-s:items-center tablet-s:px-[2rem] tablet-s:gap-[3rem]
         pt-[6rem] mobile:px-[1rem]">
-            <div className="w-[42rem] max-w-[45rem] tablet-s:max-w-[100%] text-primary 
+            <div className="w-[44rem] max-w-[45rem] tablet-s:max-w-[100%] text-primary 
             tablet-s:justify-center tablet-s:text-center tablet-s:w-[100%]">
-                <h1 className="text-[7rem] leading-[7rem]
+                <h1 className="text-[5.6rem] leading-[7rem]
                 tablet-s:w-[100%] tablet-s:text-[4rem] tablet-s:leading-[4rem] mobile:text-[4rem] mobile:leading-[4.5rem]">
-                    <span className="text-[8.2rem] tablet-s:text-[15vw] tracking-wide">Schoolland</span> Construction
+                    <span className="text-[8.2rem] tablet-s:text-[15vw] tracking-wide">Schoolland</span> Construction Inc.
                 </h1>
                 <p className="text-[1.5rem] font-[500] mt-[3rem] pr-6 pl-4
                 tablet-s:text-[1.1rem] tablet-s:mt-[2rem] tablet-s:px-[3rem]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                tempor incididunt ut labore et dolore magna ut aliqua. Ut enim ad minim veniam, 
-                quis nostrud.
+                Residential Construction. From drafting to 3d design to final insepction. There for your project concept to completion.
                 </p>
             </div>
             
