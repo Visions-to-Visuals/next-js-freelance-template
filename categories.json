@@ -1,4 +1,4 @@
-const categories = [
+[
     {
         "text": "Kitchens",
         "images": [
@@ -71,5 +71,3 @@ const categories = [
         ]
     }
 ]
-
-export default categories;
