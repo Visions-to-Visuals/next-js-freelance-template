@@ -41,7 +41,7 @@ export default function HeroSection({setScrollToCategories}) {
             </div>
             
             <div className="h-[28rem] w-[22rem] tablet-s:hidden">
-                <Image width={100} height={100} layout="responsive" alt="Schoolland" src="/images/schoolland.png"></Image>
+                <Image width={100} height={100} layout="responsive" alt="Tim Schoolland" src="/images/schoolland.png"></Image>
             </div>
        
         </div>
