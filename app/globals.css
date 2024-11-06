@@ -7,22 +7,86 @@
 {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+  font-family: "Outfit";
 }
 
 html 
 {
-  height: 100%;
   font-size: 1rem;
+  scroll-behavior: unset;
 }
 
 body
 {
   margin: 0;
   padding: 0;
-  background-color: #202124;
+  background-color: #2B4C3B;
+}
+
+section
+{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 h1 {
-  font-size: clamp(2rem, 8vw, 2.8rem);
+  font-size: clamp(2rem, 8vw, 3rem);
   line-height: clamp(2.5rem, 10vw, 3.6rem);
+  font-weight: 700;
+  text-align: center;
+}
+
+#shadow-host-companion {
+	  display: none;
+}
+
+.custom-gradient {
+    background-image: linear-gradient(to right, #FF3131, #FFB648);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+.backgroundRepeater {
+	position: relative;
+  }
+  
+  .backgroundRepeater::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('/images/floorplan.png');
+	background-repeat: repeat;
+	opacity: 0.1;
+	z-index: -1;
+	pointer-events: none;
+	animation: fadeIn 3s ease-in-out;
+  }
+
+@layer utilities {
+	ul li {
+		@apply relative tracking-wider;
+	}
+	ul li::after {
+		@apply content-[''] bg-[#ffffff] h-[3px] w-[0%] left-0 -bottom-[5px] rounded-3xl absolute duration-300;
+	}
+	ul li:hover::after {
+		@apply w-[100%];
+	}
+}
+
+@layer utilities {
+	.category {
+		@apply relative tracking-wider;
+	}
+	.category::after {
+		@apply content-[''] bg-[#ffffff] h-[4px] w-[0%] left-0 -bottom-[0px] rounded-full absolute duration-300;
+	}
+	.category:hover::after {
+		@apply w-[100%];
+	}
 }
